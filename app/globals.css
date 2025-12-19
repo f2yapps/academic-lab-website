@@ -40,3 +40,16 @@ body {
 .animate-scroll {
   animation: scroll 20s linear infinite;
 }
+
+.animate-scroll-reverse {
+  animation: scroll-reverse 25s linear infinite;
+}
+
+@keyframes scroll-reverse {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}

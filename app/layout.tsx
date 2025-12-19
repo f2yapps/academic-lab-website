@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className="bg-gradient-to-b from-blue-50 via-white to-blue-50 text-gray-900 min-h-screen flex flex-col">
         <Navbar />
         <Banner />
-        <main className="pt-6 flex-grow">{children}</main>
+        <main className="pt-4 sm:pt-6 flex-grow">{children}</main>
         <Footer />
       </body>
     </html>

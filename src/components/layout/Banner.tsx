@@ -4,10 +4,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const banners = [
-  "/banners/banner1.png",
-  "/banners/banner2.png",
-  "/banners/banner3.png",
-  "/banners/banner4.png",
+  "/banners/banners_a.png",
+  "/banners/banners_b.png",
+  "/banners/banners_c.png",
+  "/banners/banners_d.png",
 ];
 
 export default function Banner() {
@@ -42,20 +42,56 @@ export default function Banner() {
       ))}
       
       {/* Running text at bottom of banner */}
-      <div className="absolute bottom-0 left-0 right-0 py-3 overflow-hidden bg-transparent">
-        <div className="flex animate-scroll whitespace-nowrap">
-          <span className="text-lg font-semibold text-white drop-shadow-lg" suppressHydrationWarning>
-            Precision Agriculture Lab (PAL) @ University of Maryland
-          </span>
+      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden" style={{
+        background: 'linear-gradient(to top, rgba(30, 58, 138, 0.4), rgba(59, 130, 246, 0.3))',
+        backdropFilter: 'blur(10px)'
+      }}>
+        <div className="py-2 sm:py-3">
+          <div className="flex animate-scroll whitespace-nowrap">
+            {/* First set */}
+            <span 
+              className="text-sm sm:text-lg font-semibold px-6" 
+              style={{
+                color: '#FFFFFF'
+              }}
+              suppressHydrationWarning
+            >
+              Precision Agriculture Lab, University of Maryland
+            </span>
+            <span 
+              className="text-sm sm:text-lg font-semibold" 
+              style={{
+                color: '#FFFFFF',
+                paddingLeft: '400px'
+              }}
+              suppressHydrationWarning
+            >
+              Precision Agriculture Technology Conference on Feb 26, 2026 at the Crowne Plaza, Annapolis.
+            </span>
+            {/* Duplicated set for seamless scrolling */}
+            <span 
+              className="text-sm sm:text-lg font-semibold" 
+              style={{
+                color: '#FFFFFF',
+                paddingLeft: '400px'
+              }}
+              suppressHydrationWarning
+            >
+              Precision Agriculture Lab, University of Maryland
+            </span>
+            <span 
+              className="text-sm sm:text-lg font-semibold" 
+              style={{
+                color: '#FFFFFF',
+                paddingLeft: '400px'
+              }}
+              suppressHydrationWarning
+            >
+              Precision Agriculture Technology Conference on Feb 26, 2026 at the Crowne Plaza, Annapolis.
+            </span>
+          </div>
         </div>
       </div>
     </div>
   );
 }
-
-
-
-
-
-
-
