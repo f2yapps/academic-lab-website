@@ -7,7 +7,6 @@ const banners = [
   "/banners/banner1.png",
   "/banners/banner2.png",
   "/banners/banner3.png",
-  "/banners/banner4.png",
   "/banners/banner5.png",
   "/banners/banner6.png",
 ];
