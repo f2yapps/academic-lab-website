@@ -22,7 +22,7 @@ const projects: Project[] = [
     fundingAgency: "TBD",
     placeOfImplementation: "Maryland, USA",
     projectPageUrl: "#",
-    images: ["/banners/banner_a.png", "/banners/banner_b.png"],
+    images: ["/banners/banners_a.png", "/banners/banners_b.png"],
   },
   {
     id: "2",
