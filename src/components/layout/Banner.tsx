@@ -8,7 +8,6 @@ const banners = [
   "/banners/banner2.png",
   "/banners/banner3.png",
   "/banners/banner5.png",
-  "/banners/banner6.png",
 ];
 
 export default function Banner() {
