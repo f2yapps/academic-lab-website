@@ -35,7 +35,7 @@ const teamMembers: TeamMember[] = [
       phd: "Major- Biosystems Engineering, Auburn University; Minor- Statistics, Auburn University",
       msc: "Civil and Environmental Engineering, Auburn University",
       mtech: "Hydrology, Indian Institute of Technology (IIT) Roorkee and University of Stuttgart",
-      bsc: "B.Tech- Agricultural Engineering, Punjab Agricultural University",
+      bsc: "Agricultural Engineering, Punjab Agricultural University",
     },
     links: {
       website: "https://agnr.umd.edu/about/directory/hemendra-kumar/",
@@ -51,7 +51,7 @@ const teamMembers: TeamMember[] = [
     phone: "786-491-5076",
     education: {
       phd: "Agricultural and Biological Engineering, University of Florida, USA",
-      msc: "Agricultural Engineering, Banaras Hindu University, India",
+      mtech: "Agricultural Engineering, Banaras Hindu University, India",
       bsc: "Agricultural and Biological Engineering, Haramaya University, Ethiopia",
     },
     links: {
@@ -221,7 +221,9 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
             <li className="flex items-start">
               <span className="text-blue-600 mr-2 mt-1">•</span>
               <span>
-                <span className="font-semibold text-gray-900">B.Sc.:</span> {member.education.bsc}
+                <span className="font-semibold text-gray-900">
+                  {member.name === "Dr. Hemendra Kumar" ? "B.Tech.:" : "B.Sc.:"}
+                </span> {member.education.bsc}
               </span>
             </li>
           )}

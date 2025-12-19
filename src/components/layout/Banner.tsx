@@ -4,10 +4,11 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const banners = [
-  "/banners/banners_a.png",
-  "/banners/banners_b.png",
-  "/banners/banners_c.png",
-  "/banners/banners_d.png",
+  "/banners/banner1.png",
+  "/banners/banner2.png",
+  "/banners/banner3.png",
+  "/banners/banner4.png",
+  "/banners/banner5.png",
 ];
 
 export default function Banner() {
