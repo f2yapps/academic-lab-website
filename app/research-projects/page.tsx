@@ -22,7 +22,7 @@ const projects: Project[] = [
     fundingAgency: "TBD",
     placeOfImplementation: "Maryland, USA",
     projectPageUrl: "#",
-    images: ["/banners/banners_a.png", "/banners/banners_b.png"],
+    images: ["/banners/banner1.png", "/banners/banner2.png"],
   },
   {
     id: "2",
@@ -31,7 +31,7 @@ const projects: Project[] = [
     fundingAgency: "Harry R. Hughes Center for Agro-Ecology (2024-2026)",
     placeOfImplementation: "Maryland, USA",
     projectPageUrl: "#",
-    images: ["/banners/banners_c.png", "/banners/banners_d.png"],
+    images: ["/banners/banner3.png", "/banners/banner5.png"],
   },
   {
     id: "3",
@@ -40,7 +40,7 @@ const projects: Project[] = [
     fundingAgency: "NIFA (2024-2025)",
     placeOfImplementation: "Maryland, USA",
     projectPageUrl: "#",
-    images: ["/banners/banners_d.png", "/banners/banners_a.png"],
+    images: ["/banners/banner6.png", "/banners/banner1.png"],
   },
   {
     id: "4",
@@ -49,7 +49,7 @@ const projects: Project[] = [
     fundingAgency: "Nationwide AgTech (2023-2024)",
     placeOfImplementation: "Maryland, USA",
     projectPageUrl: "#",
-    images: ["/banners/banners_b.png", "/banners/banners_d.png"],
+    images: ["/banners/banner2.png", "/banners/banner3.png"],
   },
   {
     id: "5",
@@ -58,7 +58,7 @@ const projects: Project[] = [
     fundingAgency: "TBD",
     placeOfImplementation: "Maryland, USA",
     projectPageUrl: "#",
-    images: ["/banners/banners_a.png", "/banners/banners_c.png"],
+    images: ["/banners/banner5.png", "/banners/banner6.png"],
   },
 ];
 
