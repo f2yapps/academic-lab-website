@@ -68,9 +68,9 @@ const teamMembers: TeamMember[] = [
     email: "cmpeters@umd.edu",
     phone: "(301) 226-7404",
     education: {
-      phd: "Plant Science — University of Maryland, College Park",
-      msc: "Plant Science — University of Maryland, College Park",
-      bsc: "International Studies — University of North Carolina at Chapel Hill",
+      phd: "Plant Science, University of Maryland, College Park, USA",
+      msc: "Plant Science, University of Maryland, College Park, USA",
+      bsc: "International Studies, University of North Carolina at Chapel Hill, USA",
     },
     links: {
       googleScholar: "https://scholar.google.com/...",
