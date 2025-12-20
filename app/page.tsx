@@ -32,7 +32,7 @@ export default function Home() {
 
           {/* Right side - Profile picture and contact info */}
           <div className="lg:w-80 flex-shrink-0">
-            <div className="bg-gray-100 rounded-lg p-4 sm:p-6">
+            <div className="bg-gray-100 rounded-lg p-4 sm:p-6 max-h-[800px] overflow-y-auto">
               <div className="mb-6">
                 <Image
                   src="/profile%20pictures/HK_Headshot.jpeg"
