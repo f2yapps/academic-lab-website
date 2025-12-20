@@ -183,7 +183,7 @@ export default function Home() {
                 />
               </a>
               <div className="text-center space-y-3">
-                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 leading-tight">Precision Technologies for Digital Agriculture: Harnessing IoT, Big Data, Crop Modeling, and Al for Agricultural Production</h3>
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 leading-tight">Precision Technologies for Digital Agriculture: Harnessing IoT, Big Data, Crop Modeling, and AI for Agricultural Production</h3>
                 <p className="text-sm sm:text-base text-gray-700">
                   <span className="font-medium">Edited by:</span> Sushil Kumar Himanshu, Hemendra Kumar, Pankaj Kumar Gupta, Santosh Subash Palmate
                 </p>
