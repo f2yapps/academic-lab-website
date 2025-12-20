@@ -30,6 +30,12 @@ export default function Home() {
             </p>
 
             <div className="mt-6 sm:mt-10 mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                Dr. Kumar is an expert in developing water-smart irrigation solutions for site-specific precision water management issues in changing weather regimes. He has pioneered innovative methods for precision irrigation, accurately estimating water stress conditions during critical crop growth stages using field-collected data (Machine Learning) and physical models (HYDRUS and SWAT) to inform decision-making. Additionally, Dr. Kumar has devised a novel method for optimizing management zones based field capacity to determine accurate irrigation thresholds and amounts, ensuring the upper water holding capacity of the soils. This approach underscores the necessity of variable rate irrigation as a resilient solution, addressing the challenges of water scarcity during growing seasons. Please reach out at <a href="mailto:hemendra@umd.edu" className="text-blue-600 hover:underline">hemendra@umd.edu</a> to discuss the ideas.
+              </p>
+            </div>
+
+            <div className="mt-6 sm:mt-10 mb-6 sm:mb-8">
               <h2 className="text-xl sm:text-2xl font-semibold text-blue-900 mb-3 sm:mb-4">Mission</h2>
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                 To deliver advanced, science-based, technology-driven solutions that improve productivity, reduce environmental impacts, and support long-term agricultural resilience under varying climatic and management conditions through site-specific strategies. By integrating remote sensing, GIS, IoT, and AI within a robust field-lab-modeling framework, the lab empowers producers, researchers, and decision-makers to improve productivity, resource efficiency, and environmental sustainability across diverse agricultural systems.

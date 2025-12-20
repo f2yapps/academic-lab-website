@@ -2,7 +2,7 @@ export default function Page() {
   return (
     <div className="min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-12">
-        <h1 className="text-4xl font-bold text-blue-900 mb-10">Research Facilities</h1>
+        <h1 className="text-4xl font-bold text-blue-900 mb-10">Facilities</h1>
         
         <div className="space-y-10">
           {/* Field Research Facilities */}
