@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,7 +8,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Lab Information */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Precision Agriculture Lab (PAL)</h3>
+            <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+              <Image
+                src="/profile%20pictures/PAL_LOGO.png"
+                alt="PAL Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8 object-contain"
+                unoptimized
+              />
+              Precision Agriculture Lab (PAL)
+            </h3>
             <p className="text-gray-300 text-sm">
               University of Maryland College Park
               <br />
