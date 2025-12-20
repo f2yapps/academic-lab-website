@@ -8,6 +8,7 @@ interface Project {
   title: string;
   description: string;
   fundingAgency: string;
+  totalFunding?: string;
   placeOfImplementation: string;
   projectPageUrl?: string;
   images: string[];
@@ -20,6 +21,7 @@ const projects: Project[] = [
     title: "Develop the database of soil hydraulic properties for precision irrigation management in Maryland",
     description: "Creating a comprehensive database of soil hydraulic properties specific to Maryland soils to support precision irrigation management practices and improve water-use efficiency in agricultural systems.",
     fundingAgency: "TBD",
+    totalFunding: "TBD",
     placeOfImplementation: "Maryland, USA",
     projectPageUrl: "#",
     images: ["/banners/banner1.png", "/banners/banner2.png"],
@@ -29,6 +31,7 @@ const projects: Project[] = [
     title: "Quantifying actual nutrient load reduction in drainage structures",
     description: "Research project focused on measuring and quantifying the actual reduction of nutrient loads in agricultural drainage structures to improve water quality and reduce environmental impact.",
     fundingAgency: "Harry R. Hughes Center for Agro-Ecology (2024-2026)",
+    totalFunding: "TBD",
     placeOfImplementation: "Maryland, USA",
     projectPageUrl: "#",
     images: ["/banners/banner3.png", "/banners/banner5.png"],
@@ -38,6 +41,7 @@ const projects: Project[] = [
     title: "Precision Horticulture using Unpiloted Aerial Vehicles as part of an Integrated Plant Management Approach for Ornamental Nurseries",
     description: "Development and implementation of precision horticulture techniques utilizing unpiloted aerial vehicles (UAVs) as part of an integrated plant management system for ornamental nursery operations, enhancing monitoring, decision-making, and resource optimization.",
     fundingAgency: "NIFA (2024-2025)",
+    totalFunding: "TBD",
     placeOfImplementation: "Maryland, USA",
     projectPageUrl: "#",
     images: ["/banners/banner6.png", "/banners/banner1.png"],
@@ -47,15 +51,17 @@ const projects: Project[] = [
     title: "Drought risk reduction through automated drainage water management",
     description: "Investigating and implementing automated drainage water management systems to reduce drought risks by optimizing water table control and improving water availability during critical growing periods.",
     fundingAgency: "Nationwide AgTech (2023-2024)",
+    totalFunding: "TBD",
     placeOfImplementation: "Maryland, USA",
     projectPageUrl: "#",
     images: ["/banners/banner2.png", "/banners/banner3.png"],
   },
   {
     id: "5",
-    title: "Apps Development",
+    title: "AI-Enabled Precision Irrigation Decision Support App",
     description: "Our lab is developing an AI-based irrigation decision tool designed to help farmers apply the optimal amount of water to their fields. This approach reduces water and nutrient usage, ultimately improving agricultural productivity while minimizing environmental contamination caused by runoff and nutrient leaching.",
     fundingAgency: "TBD",
+    totalFunding: "TBD",
     placeOfImplementation: "Maryland, USA",
     projectPageUrl: "#",
     images: ["/banners/banner5.png", "/banners/banner6.png"],
@@ -115,6 +121,12 @@ export default function Page() {
                         <span className="font-semibold text-gray-900">Funding Agency: </span>
                         <span className="text-gray-700">{project.fundingAgency}</span>
                       </div>
+                      {project.totalFunding && (
+                        <div>
+                          <span className="font-semibold text-gray-900">Total Funding: </span>
+                          <span className="text-gray-700">{project.totalFunding}</span>
+                        </div>
+                      )}
                       <div>
                         <span className="font-semibold text-gray-900">Place of Implementation: </span>
                         <span className="text-gray-700">{project.placeOfImplementation}</span>
