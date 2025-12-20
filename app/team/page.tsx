@@ -43,6 +43,7 @@ const teamMembers: TeamMember[] = [
       website: "https://agnr.umd.edu/about/directory/hemendra-kumar/",
       googleScholar: "https://scholar.google.com/citations?user=ym2vnxoAAAAJ&hl=en&oi=ao",
       linkedin: "https://www.linkedin.com/in/hemendra-kumar-pa/",
+      x: "https://x.com/username",
     },
     category: "PI",
   },
@@ -61,6 +62,7 @@ const teamMembers: TeamMember[] = [
       researchGate: "https://www.researchgate.net/profile/Fitsum-Teshome",
       linkedin: "https://www.linkedin.com/in/fitsum-teshome-ph-d-52b305ab/",
       youtube: "https://www.youtube.com/@Dr.Fitsum_Teshome",
+      x: "https://x.com/username",
     },
     category: "Postdoctoral Research Associate",
   },
@@ -78,6 +80,7 @@ const teamMembers: TeamMember[] = [
       googleScholar: "https://scholar.google.com/...",
       researchGate: "https://www.researchgate.net/...",
       linkedin: "https://www.linkedin.com/...",
+      x: "https://x.com/username",
     },
     category: "Postdoctoral Research Associate",
   },
@@ -91,6 +94,7 @@ const teamMembers: TeamMember[] = [
     },
     links: {
       linkedin: "https://www.linkedin.com/...",
+      x: "https://x.com/username",
     },
     category: "Graduate Students",
   },
@@ -103,6 +107,7 @@ const teamMembers: TeamMember[] = [
     },
     links: {
       linkedin: "https://www.linkedin.com/...",
+      x: "https://x.com/username",
     },
     category: "Undergraduate Students",
   },
@@ -115,6 +120,7 @@ const teamMembers: TeamMember[] = [
     },
     links: {
       linkedin: "https://www.linkedin.com/...",
+      x: "https://x.com/username",
     },
     category: "Undergraduate Students",
   },
@@ -129,6 +135,7 @@ const teamMembers: TeamMember[] = [
     },
     links: {
       linkedin: "https://www.linkedin.com/...",
+      x: "https://x.com/username",
     },
     category: "Former Lab Members",
   },
@@ -266,12 +273,17 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
               href={member.links.researchGate}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center bg-green-600 text-white rounded-full hover:bg-green-700 hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5"
+              className="w-10 h-10 flex items-center justify-center hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5"
               title="ResearchGate"
             >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19.555 0H4.445C1.996 0 0 1.996 0 4.445v15.111C0 22.004 1.996 24 4.445 24h15.111C22.004 24 24 22.004 24 19.555V4.445C24 1.996 22.004 0 19.555 0zm-9.555 17.333c-2.133 0-3.867-1.733-3.867-3.867s1.733-3.867 3.867-3.867 3.867 1.733 3.867 3.867-1.733 3.867-3.867 3.867z"/>
-              </svg>
+              <Image
+                src="/profile%20pictures/ResearchGate_icon_SVG.svg.png"
+                alt="ResearchGate"
+                width={40}
+                height={40}
+                className="w-10 h-10 object-contain"
+                unoptimized
+              />
             </a>
           )}
           {member.links.linkedin && (

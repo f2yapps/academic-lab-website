@@ -28,7 +28,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/research-projects" className="text-gray-300 hover:text-white transition">
-                  Research Projects
+                  Projects
                 </Link>
               </li>
               <li>
@@ -39,11 +39,6 @@ export default function Footer() {
               <li>
                 <Link href="/team" className="text-gray-300 hover:text-white transition">
                   Team
-                </Link>
-              </li>
-              <li>
-                <Link href="/join" className="text-gray-300 hover:text-white transition">
-                  Join Our Lab
                 </Link>
               </li>
             </ul>
