@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 
 const navItems = [
@@ -22,15 +21,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto py-4 sm:py-5 pl-0 pr-4 sm:pr-6">
         <div className="flex justify-between items-center">
           {/* Lab Name / Logo - Left edge */}
-          <Link href="/" className="flex items-center gap-2 text-xl sm:text-2xl md:text-3xl font-bold text-yellow-400 hover:text-yellow-300 transition whitespace-nowrap">
-            <Image
-              src="/profile%20pictures/PAL_LOGO.png"
-              alt="PAL Logo"
-              width={32}
-              height={32}
-              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 object-contain"
-              unoptimized
-            />
+          <Link href="/" className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-400 hover:text-yellow-300 transition whitespace-nowrap">
             Precision Agriculture Lab
           </Link>
 
