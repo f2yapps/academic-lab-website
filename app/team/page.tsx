@@ -52,7 +52,7 @@ const teamMembers: TeamMember[] = [
     name: "Fitsum Teshome, Ph.D.",
     profileImage: "/profile%20pictures/headshotfitsum.jpeg",
     email: "fteshome@umd.edu",
-    phone: "786-491-5076",
+    phone: "(301) 314-6301",
     education: {
       phd: "Agricultural and Biological Engineering, University of Florida, USA",
       mtech: "Agricultural Engineering, Banaras Hindu University, India",
@@ -86,11 +86,10 @@ const teamMembers: TeamMember[] = [
     category: "Postdoctoral Research Associate",
   },
   {
-    name: "Abubakar Siddiq Palli (“Abubakar”)",
+    name: "Abubakar Siddiq Palli ("Abubakar")",
     email: "absiddiq@umd.edu",
     phone: "240-481-3766",
     education: {
-      bsc: "Institution",
       msc: "Masters in Robotics,University of Maryland",
     },
     links: {
@@ -117,7 +116,7 @@ const teamMembers: TeamMember[] = [
     email: "ascj@umd.edu",
     education: {
       bsc: "Electronics and Communication Engineering",
-      msc: "M.S. Student (Telecommunications Engineering) & Research Assistant (In Progress)",
+      msc: "Telecommunications Engineering, University Maryland (In Progress)",
     },
     links: {
       linkedin: "www.linkedin.com/in/srichandrajareddyallala",
@@ -139,8 +138,8 @@ const teamMembers: TeamMember[] = [
     name: "Kaustubh Shah",
     email: "kshah115@umd.edu",
     education: {
-      bsc: "Electronics And Communication Engineering, Motilal Nehru National Institute Of Technology (MNNIT)",
-      msc: "M.Sc student in Applied Machine Learning, University of Maryland (In Progress) ",
+      bsc: "Electronics and Communication Engineering, Motilal Nehru National Institute Of Technology (MNNIT)",
+      msc: "Applied Machine Learning, University of Maryland (In Progress) ",
     },
     links: {
       linkedin: "https://www.linkedin.com/in/kaustubh-shah",
