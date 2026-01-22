@@ -86,7 +86,8 @@ const teamMembers: TeamMember[] = [
     category: "Postdoctoral Research Associate",
   },
   {
-    name: "Abubakar Siddiq Palli ("Abubakar")",
+    name: "Abubakar Siddiq Palli (\"Abubakar\")",
+    profileImage: "/profile%20pictures/Abubakarheadshot.png",
     email: "absiddiq@umd.edu",
     phone: "240-481-3766",
     education: {
@@ -101,6 +102,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Ananth Sriram",
+    profileImage: "/profile%20pictures/Ananthheadshot.jpeg",
     email: "asriram2@terpmail.umd.edu",
     education: {
       bsc: "Computer Science (Machine Learning Track),University of Maryland (In Progress)",
@@ -113,6 +115,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Sri Chandraja Reddy Allala (\"Sri Allala\")",
+    profileImage: "/profile%20pictures/SriAllalaheadshot.jpeg",
     email: "ascj@umd.edu",
     education: {
       bsc: "Electronics and Communication Engineering",
@@ -136,6 +139,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Kaustubh Shah",
+    profileImage: "/profile%20pictures/Kaustubhheadshot.JPG",
     email: "kshah115@umd.edu",
     education: {
       bsc: "Electronics and Communication Engineering, Motilal Nehru National Institute Of Technology (MNNIT)",
