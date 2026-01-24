@@ -49,6 +49,42 @@ export default function Page() {
               </div>
             </div>
 
+            {/* Research Podcast Section */}
+            <div>
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Research Podcast</h3>
+              <div className="space-y-4">
+                <div className="border-l-4 border-blue-500 pl-4 py-2">
+                  <h4 className="font-semibold text-gray-900">Dr. Hemendra Kumar: Precision Irrigation in Action | Ep. 74</h4>
+                  <p className="text-gray-700 text-sm mb-3">The Crop Science Podcast Show - Dr. Hemendra Kumar explores the latest advancements in irrigation management, discussing optimizing water use through precision irrigation, automated drainage systems, and data-driven decision-making.</p>
+                  <div className="flex flex-wrap gap-3">
+                    <a 
+                      href="https://open.spotify.com/episode/0drhYU5URbLsnxFoAEfmSO?si=UTDTM0HXRJSxQJqCwTD11g&nd=1&dlsi=cd5e209eeab44cd3" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm font-medium"
+                    >
+                      <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.84-.179-.84-.66 0-.299.18-.599.479-.719 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.24 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.56.3z"/>
+                      </svg>
+                      Listen on Spotify
+                    </a>
+                    <a 
+                      href="https://podcasts.apple.com/br/podcast/dr-hemendra-kumar-precision-irrigation-in-action-ep-74/id1720782615?i=1000708311353" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium"
+                    >
+                      <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.96-3.24-1.44-2.24-1.16-3.37-1.93-3.37-3.72V4.72c0-1.58 1.05-2.23 2.5-1.45l8.78 4.03c1.5.69 2.47 1.18 2.47 2.68 0 .5-.08 1.01-.25 1.5l-.14.4c-.35 1.07-1.14 2.03-2.37 2.03zm-1.02-1.76c.25-.25.44-.55.57-.88.05-.15.08-.31.08-.47 0-.66-.36-1.19-1.03-1.45l-9.2-4.22c-.4-.18-.7.05-.7.5v9.4c0 .95.46 1.56 1.48 2.09.9.47 1.8.9 2.8 1.36.2.09.4.18.6.26.4.15.8.28 1.2.4.2.07.4.12.6.15.3.05.6.05.9 0 .3-.05.6-.12.88-.23.28-.1.54-.25.75-.45z"/>
+                      </svg>
+                      Listen on Apple Podcasts
+                    </a>
+                  </div>
+                  <p className="text-sm text-gray-500 mt-2">Published: May 13, 2025 • Duration: 28 min</p>
+                </div>
+              </div>
+            </div>
+
             {/* Research Grant Awarded Section */}
             <div>
               <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Research Grant Awards</h3>
