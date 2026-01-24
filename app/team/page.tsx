@@ -114,6 +114,19 @@ const teamMembers: TeamMember[] = [
     category: "Undergraduate Students",
   },
   {
+    name: "Dhathri Meda",
+    profileImage: "/profile%20pictures/Dhathriheadshot.jpeg",
+    email: "dmeda@umd.edu",
+    education: {
+      msc: "Applied Machine Learning, University of Maryland University (In Progress)",
+    },
+    links: {
+      website: "https://portfolio-dhathri-meda.vercel.app/",
+      googleScholar: "https://scholar.google.com/citations?user=svHM7j4AAAAJ&hl=en",
+    },
+    category: "Graduate Students",
+  },
+  {
     name: "Sri Chandraja Reddy Allala (\"Sri Allala\")",
     profileImage: "/profile%20pictures/SriAllalaheadshot.jpeg",
     email: "ascj@umd.edu",
