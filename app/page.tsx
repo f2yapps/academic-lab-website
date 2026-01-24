@@ -14,7 +14,7 @@ export default function Home() {
         <div className="relative mb-6 sm:mb-8 py-4 sm:py-6 rounded-lg overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 animate-gradient bg-[length:200%_200%] opacity-10"></div>
           <div className="absolute inset-0 bg-gradient-to-l from-green-400 via-blue-300 to-green-400 animate-gradient bg-[length:200%_200%] opacity-10" style={{ animationDelay: '1.5s' }}></div>
-          <h1 className="relative text-3xl sm:text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 bg-clip-text text-transparent">
+          <h1 className="relative text-2xl sm:text-3xl md:text-4xl font-bold text-center bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 bg-clip-text text-transparent">
             Digital and Precision Agriculture Lab
           </h1>
         </div>

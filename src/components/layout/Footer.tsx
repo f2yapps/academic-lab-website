@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Lab Information */}
           <div>
-            <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+            <h3 className="text-base font-bold mb-4 flex items-center gap-2">
               <Image
                 src="/profile%20pictures/PAL_LOGO.png"
                 alt="PAL Logo"
@@ -17,7 +17,7 @@ export default function Footer() {
                 className="w-8 h-8 object-contain"
                 unoptimized
               />
-              Precision Agriculture Lab (PAL)
+              Digital and Precision Agriculture Lab (D-PAL)
             </h3>
             <p className="text-gray-300 text-sm">
               University of Maryland College Park

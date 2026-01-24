@@ -5,8 +5,8 @@ import Banner from "@/components/layout/Banner";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Precision Agriculture Lab (PAL) | University of Maryland",
-  description: "The Precision Agriculture Lab (PAL) at the University of Maryland is dedicated to advancing innovative, data-driven solutions for sustainable and efficient agricultural practices through remote sensing, GIS, IoT, and artificial intelligence.",
+  title: "Digital and Precision Agriculture Lab (D-PAL) | University of Maryland",
+  description: "The Digital and Precision Agriculture Lab (D-PAL) at the University of Maryland is dedicated to advancing innovative, data-driven solutions for sustainable and efficient agricultural practices through remote sensing, GIS, IoT, and artificial intelligence.",
   icons: {
     icon: "/favicon.ico",
   },

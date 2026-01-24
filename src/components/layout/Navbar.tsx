@@ -21,8 +21,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto py-4 sm:py-5 pl-0 pr-4 sm:pr-6">
         <div className="flex justify-between items-center">
           {/* Lab Name / Logo - Left edge */}
-          <Link href="/" className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-400 hover:text-yellow-300 transition whitespace-nowrap">
-            Precision Agriculture Lab
+          <Link href="/" className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-400 hover:text-yellow-300 transition whitespace-nowrap">
+            Digital and Precision Agriculture Lab
           </Link>
 
           {/* Desktop Navigation */}

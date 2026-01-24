@@ -68,13 +68,13 @@ export default function Banner() {
           <div className="flex animate-scroll whitespace-nowrap">
             {/* First set */}
             <span 
-              className="text-sm sm:text-lg font-semibold px-6" 
+              className="text-xs sm:text-base font-semibold px-6" 
               style={{
                 color: '#FFFFFF'
               }}
               suppressHydrationWarning
             >
-              Precision Agriculture Lab, University of Maryland
+              Digital and Precision Agriculture Lab, University of Maryland
             </span>
             <span 
               className="text-sm sm:text-lg font-semibold" 
@@ -88,14 +88,14 @@ export default function Banner() {
             </span>
             {/* Duplicated set for seamless scrolling */}
             <span 
-              className="text-sm sm:text-lg font-semibold" 
+              className="text-xs sm:text-base font-semibold" 
               style={{
                 color: '#FFFFFF',
                 paddingLeft: '400px'
               }}
               suppressHydrationWarning
             >
-              Precision Agriculture Lab, University of Maryland
+              Digital and Precision Agriculture Lab, University of Maryland
             </span>
             <span 
               className="text-sm sm:text-lg font-semibold" 
