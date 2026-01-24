@@ -5,13 +5,14 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const banners = [
-  "/banners/banner1.png",
-  "/banners/banner2.png",
-  "/banners/banner3.png",
-  "/banners/banner5.png",
-  "/banners/banner7.JPG",
-  "/banners/banner8.JPG",
   "/banners/banner9.jpg",
+  "/banners/banner2.png",
+  "/banners/banner1.png",
+  "/banners/banner3.png",
+  "/banners/banner7.JPG",
+  "/banners/banner5.png",
+  "/banners/banner8.JPG",
+  ,
 ];
 
 export default function Banner() {
