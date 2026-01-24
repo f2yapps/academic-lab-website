@@ -41,8 +41,8 @@ export default function Page() {
                 {/* <div className="aspect-video">
                   <iframe
                     className="w-full h-full rounded-lg"
-                    src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-                    title="YouTube video player"
+                    src="https://www.youtube.com/watch?v=79s0bXQguig"
+                    title="Dr. Hemendra Kumar: Precision Irrigation in Action"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
