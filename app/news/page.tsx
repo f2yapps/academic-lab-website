@@ -37,17 +37,15 @@ export default function Page() {
             <div>
               <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">YouTube Videos</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Example YouTube video embed - Replace with actual video IDs */}
-                {/* <div className="aspect-video">
+                <div className="aspect-video">
                   <iframe
                     className="w-full h-full rounded-lg"
-                    src="https://www.youtube.com/watch?v=79s0bXQguig"
+                    src="https://www.youtube.com/embed/79s0bXQguig"
                     title="Dr. Hemendra Kumar: Precision Irrigation in Action"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
-                </div> */}
-                <p className="text-gray-600 italic">YouTube videos will be displayed here. Add video embeds by replacing VIDEO_ID_HERE with your actual YouTube video IDs.</p>
+                </div>
               </div>
             </div>
 
@@ -55,13 +53,11 @@ export default function Page() {
             <div>
               <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Awards</h3>
               <div className="space-y-4">
-                {/* Example award - Add more as needed */}
-                {/* <div className="border-l-4 border-blue-500 pl-4 py-2">
+                <div className="border-l-4 border-blue-500 pl-4 py-2">
                   <h4 className="font-semibold text-gray-900">Award Title</h4>
                   <p className="text-gray-700">Award description and details.</p>
                   <p className="text-sm text-gray-500 mt-1">Year: 2025</p>
-                </div> */}
-                <p className="text-gray-600 italic">Awards and recognitions will be displayed here.</p>
+                </div>
               </div>
             </div>
 
@@ -69,8 +65,7 @@ export default function Page() {
             <div>
               <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Other Media</h3>
               <div className="space-y-4">
-                {/* Example media item - Add more as needed */}
-                {/* <div className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <div className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                   <div className="flex-shrink-0">
                     <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -81,8 +76,7 @@ export default function Page() {
                     <p className="text-gray-700 text-sm">Description of the media content.</p>
                     <a href="#" className="text-blue-600 hover:text-blue-800 text-sm mt-1 inline-block">View More →</a>
                   </div>
-                </div> */}
-                <p className="text-gray-600 italic">Other media content (podcasts, interviews, articles, etc.) will be displayed here.</p>
+                </div>
               </div>
             </div>
           </div>
