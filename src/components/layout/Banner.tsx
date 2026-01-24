@@ -12,7 +12,6 @@ const banners = [
   "/banners/banner7.JPG",
   "/banners/banner5.png",
   "/banners/banner8.JPG",
-  ,
 ];
 
 export default function Banner() {
