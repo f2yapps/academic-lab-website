@@ -132,6 +132,26 @@ export default function Page() {
                     </a>
                   </div>
                 </div>
+                
+                <div className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                  <div className="flex-shrink-0">
+                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Kumar out to offer a more strategic use of water</h4>
+                    <p className="text-gray-700 text-sm">The Delmarva Farmer article covering Dr. Hemendra Kumar's $1.4M grant to develop science-based irrigation management strategies for Maryland farmers.</p>
+                    <a 
+                      href="https://americanfarm.com/articles/delmarvafarmer/kumar-out-to-offer-a-more-strategic-use-of-water/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 text-sm mt-1 inline-block"
+                    >
+                      Read Article →
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
