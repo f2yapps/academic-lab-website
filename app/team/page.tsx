@@ -101,6 +101,19 @@ const teamMembers: TeamMember[] = [
     category: "Graduate Students",
   },
   {
+    name: "Sri Chandraja Reddy Allala (\"Sri Allala\")",
+    profileImage: "/profile%20pictures/SriAllalaheadshot.jpeg",
+    email: "ascj@umd.edu",
+    education: {
+      bsc: "Electronics and Communication Engineering",
+      msc: "Telecommunications Engineering, University Maryland (In Progress)",
+    },
+    links: {
+      linkedin: "www.linkedin.com/in/srichandrajareddyallala",
+    },
+    category: "Graduate Students",
+  },
+  {
     name: "Ananth Sriram",
     profileImage: "/profile%20pictures/Ananthheadshot.jpeg",
     email: "asriram2@terpmail.umd.edu",
@@ -123,19 +136,6 @@ const teamMembers: TeamMember[] = [
     links: {
       website: "https://portfolio-dhathri-meda.vercel.app/",
       googleScholar: "https://scholar.google.com/citations?user=svHM7j4AAAAJ&hl=en",
-    },
-    category: "Graduate Students",
-  },
-  {
-    name: "Sri Chandraja Reddy Allala (\"Sri Allala\")",
-    profileImage: "/profile%20pictures/SriAllalaheadshot.jpeg",
-    email: "ascj@umd.edu",
-    education: {
-      bsc: "Electronics and Communication Engineering",
-      msc: "Telecommunications Engineering, University Maryland (In Progress)",
-    },
-    links: {
-      linkedin: "www.linkedin.com/in/srichandrajareddyallala",
     },
     category: "Graduate Students",
   },
