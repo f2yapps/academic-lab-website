@@ -49,14 +49,22 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Awards Section */}
+            {/* Research Grant Awarded Section */}
             <div>
-              <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Awards</h3>
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Research Grant Awards</h3>
               <div className="space-y-4">
                 <div className="border-l-4 border-blue-500 pl-4 py-2">
-                  <h4 className="font-semibold text-gray-900">Award Title</h4>
-                  <p className="text-gray-700">Award description and details.</p>
-                  <p className="text-sm text-gray-500 mt-1">Year: 2025</p>
+                  <h4 className="font-semibold text-gray-900">UME Researcher Receives $1.4M Grant</h4>
+                  <p className="text-gray-700">To Develop Data Driven Science-Based Irrigation Recommendations</p>
+                  <a 
+                    href="https://www.morningagclips.com/ume-researcher-receives-1-4m-grant/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 text-sm mt-2 inline-block"
+                  >
+                    Read Article →
+                  </a>
+                  <p className="text-sm text-gray-500 mt-1">Published: February 12, 2025</p>
                 </div>
               </div>
             </div>
@@ -68,13 +76,60 @@ export default function Page() {
                 <div className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                   <div className="flex-shrink-0">
                     <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Media Title</h4>
-                    <p className="text-gray-700 text-sm">Description of the media content.</p>
-                    <a href="#" className="text-blue-600 hover:text-blue-800 text-sm mt-1 inline-block">View More →</a>
+                    <h4 className="font-semibold text-gray-900">Extension researcher using science-based studies for site-specific smart irrigation on farmland</h4>
+                    <p className="text-gray-700 text-sm">Bay to Bay News article covering Dr. Kumar's work on science-based irrigation management.</p>
+                    <a 
+                      href="https://baytobaynews.com/stories/extension-researcher-using-science-based-studies-for-site-specific-smart-irrigation-on-farmland,215832" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 text-sm mt-1 inline-block"
+                    >
+                      Read Article →
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                  <div className="flex-shrink-0">
+                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Lower Shore Agronomy Day exposes farmers to new technology, research advancements</h4>
+                    <p className="text-gray-700 text-sm">WMDT 47abc coverage of the Lower Shore Agronomy Day event featuring Dr. Hemendra Kumar's work on precision agriculture and water management.</p>
+                    <a 
+                      href="https://www.wmdt.com/2024/01/lower-shore-agronomy-day-exposes-farmers-to-new-technology-research-advancements/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 text-sm mt-1 inline-block"
+                    >
+                      Read Article →
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                  <div className="flex-shrink-0">
+                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Precision Agriculture Technology Conference Features Innovations for Producers</h4>
+                    <p className="text-gray-700 text-sm">Morning Ag Clips article about the 2nd annual Precision Agriculture Technology Conference organized by Dr. Hemendra Kumar.</p>
+                    <a 
+                      href="https://www.morningagclips.com/precision-agriculture-technology-conference-features-innovations-for-producers/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 text-sm mt-1 inline-block"
+                    >
+                      Read Article →
+                    </a>
                   </div>
                 </div>
               </div>
