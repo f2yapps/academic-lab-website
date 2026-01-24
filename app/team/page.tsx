@@ -89,7 +89,7 @@ const teamMembers: TeamMember[] = [
     name: "Abubakar Siddiq Palli (\"Abubakar\")",
     profileImage: "/profile%20pictures/Abubakarheadshot.png",
     email: "absiddiq@umd.edu",
-    phone: "240-481-3766",
+    //phone: "240-481-3766",
     education: {
       msc: "Masters in Robotics,University of Maryland",
     },
