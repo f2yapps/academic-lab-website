@@ -9,9 +9,9 @@ const banners = [
   "/banners/banner2.png",
   "/banners/banner3.png",
   "/banners/banner5.png",
-  "/banners/banner7.png",
-  "/banners/banner8.png",
-  "/banners/banner9.png",
+  "/banners/banner7.JPG",
+  "/banners/banner8.JPG",
+  "/banners/banner9.jpg",
 ];
 
 export default function Banner() {
