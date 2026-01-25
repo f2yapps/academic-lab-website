@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function Page() {
-  const [activeWindow, setActiveWindow] = useState<'both' | 'advising' | 'publication'>('both');
+  const [activeWindow, setActiveWindow] = useState<'advising' | 'publication'>('advising');
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50/30 to-white">
@@ -18,16 +18,6 @@ export default function Page() {
 
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-8">
-          <button
-            onClick={() => setActiveWindow('both')}
-            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-              activeWindow === 'both'
-                ? 'bg-blue-600 text-white shadow-lg'
-                : 'bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50'
-            }`}
-          >
-            Show Both
-          </button>
           <button
             onClick={() => setActiveWindow('advising')}
             className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
@@ -50,14 +40,10 @@ export default function Page() {
           </button>
         </div>
         
-        {/* Two Column Layout or Full Page */}
-        <div className={`grid gap-6 sm:gap-8 ${
-          activeWindow === 'both' 
-            ? 'grid-cols-1 lg:grid-cols-2' 
-            : 'grid-cols-1'
-        }`}>
+        {/* Full Page Layout */}
+        <div className="grid grid-cols-1 gap-6 sm:gap-8">
           {/* First Window: Advising and Services */}
-          {(activeWindow === 'both' || activeWindow === 'advising') && (
+          {activeWindow === 'advising' && (
             <div className="space-y-6 sm:space-y-8">
               <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-6 sm:p-8 hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-center mb-6">
@@ -173,7 +159,7 @@ export default function Page() {
           )}
 
           {/* Second Window: Research Project and Publication */}
-          {(activeWindow === 'both' || activeWindow === 'publication') && (
+          {activeWindow === 'publication' && (
             <div className="space-y-6 sm:space-y-8">
               <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-6 sm:p-8 hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-center mb-6">
