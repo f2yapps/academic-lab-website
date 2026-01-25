@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function Page() {
-  const [activeWindow, setActiveWindow] = useState<'advising' | 'publication'>('advising');
+  const [activeWindow, setActiveWindow] = useState<'advising' | 'publication'>('publication');
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50/30 to-white">
@@ -11,23 +11,13 @@ export default function Page() {
         {/* Header */}
         <div className="text-center mb-10 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-            Publications
+            Publications and Services
           </h1>
           <div className="h-1.5 w-24 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full"></div>
         </div>
 
         {/* Tab Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-8">
-          <button
-            onClick={() => setActiveWindow('advising')}
-            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-              activeWindow === 'advising'
-                ? 'bg-blue-600 text-white shadow-lg'
-                : 'bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50'
-            }`}
-          >
-            Advising and Services
-          </button>
           <button
             onClick={() => setActiveWindow('publication')}
             className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
@@ -38,127 +28,21 @@ export default function Page() {
           >
             Research Project and Publication
           </button>
+          <button
+            onClick={() => setActiveWindow('advising')}
+            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+              activeWindow === 'advising'
+                ? 'bg-blue-600 text-white shadow-lg'
+                : 'bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50'
+            }`}
+          >
+            Advising and Services
+          </button>
         </div>
         
         {/* Full Page Layout */}
         <div className="grid grid-cols-1 gap-6 sm:gap-8">
-          {/* First Window: Advising and Services */}
-          {activeWindow === 'advising' && (
-            <div className="space-y-6 sm:space-y-8">
-              <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-6 sm:p-8 hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-center mb-6">
-                  <div className="w-2 h-8 bg-gradient-to-b from-blue-500 to-blue-700 rounded-full mr-4"></div>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-blue-900">Advising and Services</h2>
-                </div>
-                
-                <div className="space-y-6">
-                  {/* Academic Appointments */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Academic Appointments</h3>
-                    <ul className="space-y-3 pl-4">
-                      <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                        <span className="font-semibold">04/25-present</span> Affiliate Faculty, Department of Plant Science and Landscape Architecture, University of Maryland
-                      </li>
-                      <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                        <span className="font-semibold">01/25-present</span> Affiliate Faculty, Artificial Intelligence Interdisciplinary Institute at Maryland, University of Maryland
-                      </li>
-                    </ul>
-                  </div>
-
-                  {/* Advising */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Advising</h3>
-                    
-                    <div className="space-y-4">
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Undergraduate</h4>
-                        <ul className="space-y-2 pl-4">
-                          <li className="text-base text-gray-700">Nathaniel Chen - Adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Raven Noel Herron - Adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Julia Sullivan - Adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Ananth Sriram - Adviser. 2023-present.</li>
-                          <li className="text-base text-gray-700">Shreeya Venkatesh Babu - Adviser. 2023-2024.</li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Master's</h4>
-                        <ul className="space-y-2 pl-4">
-                          <li className="text-base text-gray-700">John Augustus Samura - Co-adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Dhattri Meda - Adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Nayana Gadde - Adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Sri Grandhi - Adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Kaustubh Shah - Adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Sri Chandraja Reddy Allala - Adviser. 2025-present.</li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Doctoral</h4>
-                        <ul className="space-y-2 pl-4">
-                          <li className="text-base text-gray-700">Md Mahir Shahriyar - committee member (Asian Institute of Technology-Thailand)</li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Post-doctoral</h4>
-                        <ul className="space-y-2 pl-4">
-                          <li className="text-base text-gray-700">Dr. Fitsum Teshome - Adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Dr. Cara Peterson - Adviser. 2025-present.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Editorial Boards */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Editorial Boards</h3>
-                    <ul className="space-y-2 pl-4">
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Journal of Precision Agriculture (Springer Nature)</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Agronomy Journal: Machine Learning and Precision Agriculture (Wiley)</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Journal of Smart Agricultural Technology (Elsevier)</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Special Issue Editor - Frontiers in Climate</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Guest Editor - MDPI Artificial Intelligence in Agriculture</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2024-present</span> Book Editor with Elsevier</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2023-present</span> Review Editor - Frontiers in Water</li>
-                    </ul>
-                  </div>
-
-                  {/* Campus Service */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Campus Service</h3>
-                    <ul className="space-y-2 pl-4">
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Committee Chair for Senior Faculty Specialist, MAES, AGNR</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Hiring Manager and Committee Chair for Precision Agriculture Lab, UME</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Howard County High School Recruitment, AGNR</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Judge, AGNR 2025 Cornerstone Event's Poster Session</li>
-                    </ul>
-                  </div>
-
-                  {/* Leadership Roles */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Leadership Roles (Meetings and Conferences)</h3>
-                    <ul className="space-y-2 pl-4">
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> International Advisor for the International Conference on Modern Agriculture & Allied Sciences 2025: Bridging Engineering, Policy, and Practice for a Sustainable and Resilient Future</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Moderator, Mid-Atlantic Crop Management School. Four sessions</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Moderator, Crop Irrigation Strategies and Management Oral II (includes student competition), CANVAS 2025, ASA-CSSA-SSSA.</li>
-                    </ul>
-                  </div>
-
-                  {/* Non-University Advisory */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Non-University Advisory, Reviewing Committees, etc.</h3>
-                    <ul className="space-y-2 pl-4">
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Grant Reviewer, Israel Science Foundation</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Advisor - Precision Farming Solutions, SAN R&D Business Solutions</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Second Window: Research Project and Publication */}
+          {/* First Window: Research Project and Publication */}
           {activeWindow === 'publication' && (
             <div className="space-y-6 sm:space-y-8">
               <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-6 sm:p-8 hover:shadow-xl transition-shadow duration-300">
@@ -334,6 +218,123 @@ export default function Page() {
               </div>
             </div>
           )}
+
+          {/* Second Window: Advising and Services */}
+          {activeWindow === 'advising' && (
+            <div className="space-y-6 sm:space-y-8">
+              <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-6 sm:p-8 hover:shadow-xl transition-shadow duration-300">
+                <div className="flex items-center mb-6">
+                  <div className="w-2 h-8 bg-gradient-to-b from-blue-500 to-blue-700 rounded-full mr-4"></div>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-blue-900">Advising and Services</h2>
+                </div>
+                
+                <div className="space-y-6">
+                  {/* Academic Appointments */}
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Academic Appointments</h3>
+                    <ul className="space-y-3 pl-4">
+                      <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                        <span className="font-semibold">04/25-present</span> Affiliate Faculty, Department of Plant Science and Landscape Architecture, University of Maryland
+                      </li>
+                      <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                        <span className="font-semibold">01/25-present</span> Affiliate Faculty, Artificial Intelligence Interdisciplinary Institute at Maryland, University of Maryland
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Advising */}
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Advising</h3>
+                    
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Undergraduate</h4>
+                        <ul className="space-y-2 pl-4">
+                          <li className="text-base text-gray-700">Nathaniel Chen - Adviser. 2025-present.</li>
+                          <li className="text-base text-gray-700">Raven Noel Herron - Adviser. 2025-present.</li>
+                          <li className="text-base text-gray-700">Julia Sullivan - Adviser. 2025-present.</li>
+                          <li className="text-base text-gray-700">Ananth Sriram - Adviser. 2023-present.</li>
+                          <li className="text-base text-gray-700">Shreeya Venkatesh Babu - Adviser. 2023-2024.</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Master's</h4>
+                        <ul className="space-y-2 pl-4">
+                          <li className="text-base text-gray-700">John Augustus Samura - Co-adviser. 2025-present.</li>
+                          <li className="text-base text-gray-700">Dhattri Meda - Adviser. 2025-present.</li>
+                          <li className="text-base text-gray-700">Nayana Gadde - Adviser. 2025-present.</li>
+                          <li className="text-base text-gray-700">Sri Grandhi - Adviser. 2025-present.</li>
+                          <li className="text-base text-gray-700">Kaustubh Shah - Adviser. 2025-present.</li>
+                          <li className="text-base text-gray-700">Sri Chandraja Reddy Allala - Adviser. 2025-present.</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Doctoral</h4>
+                        <ul className="space-y-2 pl-4">
+                          <li className="text-base text-gray-700">Md Mahir Shahriyar - committee member (Asian Institute of Technology-Thailand)</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Post-doctoral</h4>
+                        <ul className="space-y-2 pl-4">
+                          <li className="text-base text-gray-700">Dr. Fitsum Teshome - Adviser. 2025-present.</li>
+                          <li className="text-base text-gray-700">Dr. Cara Peterson - Adviser. 2025-present.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Editorial Boards */}
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Editorial Boards</h3>
+                    <ul className="space-y-2 pl-4">
+                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Journal of Precision Agriculture (Springer Nature)</li>
+                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Agronomy Journal: Machine Learning and Precision Agriculture (Wiley)</li>
+                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Journal of Smart Agricultural Technology (Elsevier)</li>
+                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Special Issue Editor - Frontiers in Climate</li>
+                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Guest Editor - MDPI Artificial Intelligence in Agriculture</li>
+                      <li className="text-base text-gray-700"><span className="font-semibold">2024-present</span> Book Editor with Elsevier</li>
+                      <li className="text-base text-gray-700"><span className="font-semibold">2023-present</span> Review Editor - Frontiers in Water</li>
+                    </ul>
+                  </div>
+
+                  {/* Campus Service */}
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Campus Service</h3>
+                    <ul className="space-y-2 pl-4">
+                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Committee Chair for Senior Faculty Specialist, MAES, AGNR</li>
+                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Hiring Manager and Committee Chair for Precision Agriculture Lab, UME</li>
+                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Howard County High School Recruitment, AGNR</li>
+                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Judge, AGNR 2025 Cornerstone Event's Poster Session</li>
+                    </ul>
+                  </div>
+
+                  {/* Leadership Roles */}
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Leadership Roles (Meetings and Conferences)</h3>
+                    <ul className="space-y-2 pl-4">
+                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> International Advisor for the International Conference on Modern Agriculture & Allied Sciences 2025: Bridging Engineering, Policy, and Practice for a Sustainable and Resilient Future</li>
+                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Moderator, Mid-Atlantic Crop Management School. Four sessions</li>
+                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Moderator, Crop Irrigation Strategies and Management Oral II (includes student competition), CANVAS 2025, ASA-CSSA-SSSA.</li>
+                    </ul>
+                  </div>
+
+                  {/* Non-University Advisory */}
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Non-University Advisory, Reviewing Committees, etc.</h3>
+                    <ul className="space-y-2 pl-4">
+                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Grant Reviewer, Israel Science Foundation</li>
+                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Advisor - Precision Farming Solutions, SAN R&D Business Solutions</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
         </div>
       </div>
     </div>
