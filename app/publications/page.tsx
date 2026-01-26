@@ -16,36 +16,68 @@ export default function Page() {
           <div className="h-1.5 w-24 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full"></div>
         </div>
 
-        {/* Tab Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
-          <button
-            onClick={() => setActiveWindow('publication')}
-            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-              activeWindow === 'publication'
-                ? 'bg-blue-600 text-white shadow-lg'
-                : 'bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50'
-            }`}
-          >
-            Research Project and Publication
-          </button>
-          <button
-            onClick={() => setActiveWindow('advising')}
-            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-              activeWindow === 'advising'
-                ? 'bg-blue-600 text-white shadow-lg'
-                : 'bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50'
-            }`}
-          >
-            Advising and Services
-          </button>
+        {/* Enhanced Tab Navigation */}
+        <div className="mb-10 sm:mb-12">
+          <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-2 sm:p-3 max-w-4xl mx-auto">
+            <div className="relative flex gap-2 sm:gap-3">
+              {/* Animated Background Slider */}
+              <div
+                className={`absolute top-2 bottom-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 shadow-lg transition-all duration-300 ease-in-out ${
+                  activeWindow === 'publication' ? 'left-2 right-1/2' : 'left-1/2 right-2'
+                }`}
+              />
+              
+              {/* Tab Buttons */}
+              <button
+                onClick={() => setActiveWindow('publication')}
+                className={`relative z-10 flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 ${
+                  activeWindow === 'publication'
+                    ? 'text-white shadow-md'
+                    : 'text-blue-600 hover:text-blue-700'
+                }`}
+              >
+                <div className="flex items-center justify-center gap-2">
+                  <svg className={`w-5 h-5 ${activeWindow === 'publication' ? 'text-white' : 'text-blue-600'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                  <span className="hidden sm:inline">Research Project and Publication</span>
+                  <span className="sm:hidden">Research</span>
+                </div>
+              </button>
+              
+              <button
+                onClick={() => setActiveWindow('advising')}
+                className={`relative z-10 flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 ${
+                  activeWindow === 'advising'
+                    ? 'text-white shadow-md'
+                    : 'text-blue-600 hover:text-blue-700'
+                }`}
+              >
+                <div className="flex items-center justify-center gap-2">
+                  <svg className={`w-5 h-5 ${activeWindow === 'advising' ? 'text-white' : 'text-blue-600'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  <span className="hidden sm:inline">Advising and Services</span>
+                  <span className="sm:hidden">Services</span>
+                </div>
+              </button>
+            </div>
+          </div>
+          
+          {/* Decorative Divider */}
+          <div className="mt-6 flex items-center justify-center gap-4 max-w-4xl mx-auto">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-blue-300 to-blue-500"></div>
+            <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+            <div className="flex-1 h-px bg-gradient-to-l from-transparent via-blue-300 to-blue-500"></div>
+          </div>
         </div>
         
         {/* Full Page Layout */}
         <div className="grid grid-cols-1 gap-6 sm:gap-8">
           {/* First Window: Research Project and Publication */}
           {activeWindow === 'publication' && (
-            <div className="space-y-6 sm:space-y-8">
-              <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-6 sm:p-8 hover:shadow-xl transition-shadow duration-300">
+            <div className="space-y-6 sm:space-y-8 animate-fadeIn">
+              <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300 transform hover:scale-[1.01]">
                 <div className="flex items-center mb-6">
                   <div className="w-2 h-8 bg-gradient-to-b from-blue-500 to-blue-700 rounded-full mr-4"></div>
                   <h2 className="text-2xl sm:text-3xl font-bold text-blue-900">Research Project and Publication</h2>
@@ -556,8 +588,8 @@ export default function Page() {
 
           {/* Second Window: Advising and Services */}
           {activeWindow === 'advising' && (
-            <div className="space-y-6 sm:space-y-8">
-              <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-6 sm:p-8 hover:shadow-xl transition-shadow duration-300">
+            <div className="space-y-6 sm:space-y-8 animate-fadeIn">
+              <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300 transform hover:scale-[1.01]">
                 <div className="flex items-center mb-6">
                   <div className="w-2 h-8 bg-gradient-to-b from-blue-500 to-blue-700 rounded-full mr-4"></div>
                   <h2 className="text-2xl sm:text-3xl font-bold text-blue-900">Advising and Services</h2>
