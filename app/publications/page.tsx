@@ -352,6 +352,18 @@ export default function Page() {
                         Kumar, H., Bárdossy, A., & Perumal, M. (2017). Estimation of flow duration curves in Upper Neckar catchment using Regionalization. Graduate Engineering Research Showcase, Samuel Ginn Engineering College, Auburn University, Auburn, Alabama.
                       </li>
                       <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                        Kumar, H. (2021). Influence of coupled irrigation and precipitation practices on field-scale soil nutrients in vadose zone during the growing season. Department of Biosystems Engineering, Auburn University, March 25, virtual.
+                      </li>
+                      <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                        Kumar, H. (2020). Spatiotemporal Variability in soil moisture and phosphorus in an agricultural field. Department of Biosystems Engineering, Auburn University, October 29, virtual.
+                      </li>
+                      <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                        Kumar, H., Bárdossy, A., & Perumal, M. (2016). Regionalization of flow duration curves of mesoscale catchments. Department of Hydrology, Indian Institute of Technology, Roorkee, India.
+                      </li>
+                      <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                        Kumar, H., Bárdossy, A., & Perumal, M. (2016). Regionalization of flow duration curves of mesoscale catchments. University of Stuttgart, Germany.
+                      </li>
+                      <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
                         Kumar, H. (2025). Data-Driven Irrigation Water Management: Integrating Soil Physics from Measurements to Models for Precision Irrigation. CANVAS 2025, ASA-CSSA-SSSA. November 9-12, 2025.{" "}
                         <a href="https://scisoc.confex.com/scisoc/2025am/meetingapp.cgi/Paper/169008" target="_blank" rel="noopener noreferrer" className="inline-flex items-center mt-1 px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium hover:bg-blue-100 hover:shadow-sm transition-all duration-200">
                           <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -474,7 +486,7 @@ export default function Page() {
                         Kumar, H. (2025). Working irrigation water requirements using soil moisture in crops. National Soil Moisture Workshop. June 2-5, 2025.
                       </li>
                       <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                        Kumar, H. (2025). Use of Imaging Software for Decision Making with High Resolution UAV Data. International IPM Symposium. March 3-6, 2025.
+                        Kumar, H. (2025). Use of Imaging Software for Decision Making with High-Resolution UAV Data. International IPM Symposium. March 3-6, 2025.
                       </li>
                       <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
                         Kumar, H. (2024). Precision Agriculture: Application of Digital Agriculture Technologies in Climate Smart Agricultural Water Management. Rajiv Gandhi University, Rono Hills, Arunachal Pradesh, India. December 13-16, 2024.
@@ -487,6 +499,12 @@ export default function Page() {
                       </li>
                       <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
                         Kumar, H. (2023). Overview of Precision Agriculture Research. Department of Environmental Science and Technology, University of Maryland College Park.
+                      </li>
+                      <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                        Kumar, H. (2025). Working irrigation water requirements using soil moisture in crops. National Soil Moisture Workshop. June 2-5, 2025.
+                      </li>
+                      <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                        Kumar, H. (2025). Use of Imaging Software for Decision Making with High-Resolution UAV Data. International IPM Symposium. March 3-6, 2025.
                       </li>
                       <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
                         Kumar, H. (2022). Climate Variability and its Impact on Water Resource Management. Department of Geology, College of Wooster, Ohio, USA.
