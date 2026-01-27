@@ -17,14 +17,6 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50/30 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-12">
-        {/* Header */}
-        <div className="text-center mb-10 sm:mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-            Grants, Publications, and Services
-          </h1>
-          <div className="h-1.5 w-24 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full"></div>
-        </div>
-
         {/* Enhanced Tab Navigation - 3 tabs */}
         <div className="mb-10 sm:mb-12">
           <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-2 sm:p-3 max-w-5xl mx-auto">
