@@ -3,9 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 
-const EXT_IMAGES = [
+const EXT_IMAGES_PROGRAM1 = [
   "Ext1.jpg", "Ext2.jpg", "Ext3.jpg", "Ext4.jpg", "Ext5.jpg", "Ext6.jpg",
   "Ext7.jpg", "Ext9.JPEG", "Ext10.JPG", "Ext11.jpg", "Ext12.jpg", "Ext13.jpg",
+];
+const EXT_IMAGES_PROGRAM2 = [
   "Ext15.jpg", "Ext17.jpg", "Ext18.jpg", "Ext19.jpg", "Ext20.jpg", "Ext21.jpg",
   "Ext22.jpg", "Ext23.JPEG", "Ext25.JPEG", "Ext26.JPG", "Ext28.JPG", "Ext29.JPG", "Ext30.jpg", "Ext32.jpg",
 ];
@@ -209,6 +211,32 @@ export default function Page() {
                   "Kumar, H. (2023). Importance of the edge of the field and smart drainage water management for water and nutrients in agricultural fields. BMP Field Day, Wooster, Ohio. Sponsored by USDA NIFA. This Field Day was eligible for 4.5 CLM and 5.5 CCA credits.",
                 ]} />
               </SectionCard>
+
+              {/* Extension Pictures - Program 1 */}
+              <section className="pt-6 border-t border-blue-200/50">
+                <div className="text-center mb-6">
+                  <h3 className="text-xl sm:text-2xl font-bold text-blue-900">Extension in Action</h3>
+                  <p className="text-gray-600 mt-1 text-sm sm:text-base">Precision Agricultural Water Management — field days, irrigation workshops, and outreach.</p>
+                  <div className="h-1 w-16 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full mt-3" />
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
+                  {EXT_IMAGES_PROGRAM1.map((name, i) => (
+                    <div
+                      key={name}
+                      className="group relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02] bg-gray-100"
+                    >
+                      <Image
+                        src={`/Extpictures/${name}`}
+                        alt={`Precision water management activity ${i + 1}`}
+                        fill
+                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+                  ))}
+                </div>
+              </section>
             </div>
           )}
 
@@ -429,35 +457,35 @@ export default function Page() {
                   "Kumar, H. (2023). Demonstration of the smart drainage water management system. BMP Field Day, Wooster, Ohio. Sponsored by USDA NIFA.",
                 ]} />
               </SectionCard>
+
+              {/* Extension Pictures - Program 2 */}
+              <section className="pt-6 border-t border-blue-200/50">
+                <div className="text-center mb-6">
+                  <h3 className="text-xl sm:text-2xl font-bold text-blue-900">Extension in Action</h3>
+                  <p className="text-gray-600 mt-1 text-sm sm:text-base">Digital Agricultural Technology — drone schools, field days, and technology demonstrations.</p>
+                  <div className="h-1 w-16 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full mt-3" />
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
+                  {EXT_IMAGES_PROGRAM2.map((name, i) => (
+                    <div
+                      key={name}
+                      className="group relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02] bg-gray-100"
+                    >
+                      <Image
+                        src={`/Extpictures/${name}`}
+                        alt={`Digital ag technology activity ${i + 1}`}
+                        fill
+                        sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+                  ))}
+                </div>
+              </section>
             </div>
           )}
         </div>
-
-        {/* Extension Pictures Gallery - visible on both programs */}
-        <section className="mt-12 sm:mt-16 pt-8 border-t border-blue-200/50">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-blue-900">Extension in Action</h2>
-            <p className="text-gray-600 mt-2 max-w-2xl mx-auto">Field days, workshops, demonstrations, and outreach from our extension programs.</p>
-            <div className="h-1 w-20 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full mt-4" />
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
-            {EXT_IMAGES.map((name, i) => (
-              <div
-                key={name}
-                className="group relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02] bg-gray-100"
-              >
-                <Image
-                  src={`/Extpictures/${name}`}
-                  alt={`Extension activity ${i + 1}`}
-                  fill
-                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-            ))}
-          </div>
-        </section>
       </div>
     </div>
   );
