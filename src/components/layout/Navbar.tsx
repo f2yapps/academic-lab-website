@@ -25,7 +25,6 @@ export default function Navbar() {
             <span className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-400 group-hover:text-yellow-300 transition whitespace-nowrap">
               Digital and Precision Agriculture Lab
             </span>
-            <span className="text-[10px] sm:text-xs font-medium text-violet-200 sm:mb-0.5">AI-focused research</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -15,6 +15,9 @@ interface Project {
   isAI?: boolean;
 }
 
+// Project images from public/ProjectsPictures — multiple per project, matched by theme
+const P = "/ProjectsPictures";
+
 // Project data — AI/ML projects listed first to highlight lab focus
 const projects: Project[] = [
   {
@@ -25,7 +28,14 @@ const projects: Project[] = [
     totalFunding: "TBD",
     placeOfImplementation: "Maryland, USA",
     projectPageUrl: "/apps",
-    images: ["/banners/banner5.png", "/banners/banner6.png"],
+    images: [
+      `${P}/20250814_114139.jpg`,
+      `${P}/20250814_115415.jpg`,
+      `${P}/20251023_125459.jpg`,
+      `${P}/20251023_130204.jpg`,
+      `${P}/20251023_130217.jpg`,
+      `${P}/20250801_130727.jpg`,
+    ],
     isAI: true,
   },
   {
@@ -36,7 +46,14 @@ const projects: Project[] = [
     totalFunding: "TBD",
     placeOfImplementation: "Maryland, USA",
     projectPageUrl: "#",
-    images: ["/banners/banner6.png", "/banners/banner1.png"],
+    images: [
+      `${P}/DJI_20250724150900_0004_D.JPG`,
+      `${P}/DJI_20250724150950_0007_D.JPG`,
+      `${P}/20250905_134517.jpg`,
+      `${P}/20250905_135330.jpg`,
+      `${P}/20250905_135339.jpg`,
+      `${P}/20250905_142051.jpg`,
+    ],
     isAI: true,
   },
   {
@@ -47,7 +64,15 @@ const projects: Project[] = [
     totalFunding: "TBD",
     placeOfImplementation: "Maryland, USA",
     projectPageUrl: "#",
-    images: ["/banners/banner1.png", "/banners/banner2.png"],
+    images: [
+      `${P}/20250729_111638.jpg`,
+      `${P}/20250729_111701.jpg`,
+      `${P}/20250729_112240.jpg`,
+      `${P}/20250729_112506.jpg`,
+      `${P}/20250729_112633.jpg`,
+      `${P}/20250806_140309.jpg`,
+      `${P}/20250806_141519.jpg`,
+    ],
     isAI: true,
   },
   {
@@ -58,7 +83,14 @@ const projects: Project[] = [
     totalFunding: "TBD",
     placeOfImplementation: "Maryland, USA",
     projectPageUrl: "#",
-    images: ["/banners/banner3.png", "/banners/banner5.png"],
+    images: [
+      `${P}/20250801_123403.jpg`,
+      `${P}/20250801_130234.jpg`,
+      `${P}/20250801_130901.jpg`,
+      `${P}/20250801_134205.jpg`,
+      `${P}/20250820_101531.jpg`,
+      `${P}/20251023_142941.jpg`,
+    ],
   },
   {
     id: "4",
@@ -68,7 +100,16 @@ const projects: Project[] = [
     totalFunding: "TBD",
     placeOfImplementation: "Maryland, USA",
     projectPageUrl: "#",
-    images: ["/banners/banner2.png", "/banners/banner3.png"],
+    images: [
+      `${P}/20250801_171405.jpg`,
+      `${P}/20250801_171458.jpg`,
+      `${P}/20250801_172215.jpg`,
+      `${P}/20250801_172236.jpg`,
+      `${P}/20251023_130742.jpg`,
+      `${P}/20251023_143156.jpg`,
+      `${P}/Copy of IMG-20251120-WA0006.jpg`,
+      `${P}/Copy of IMG-20251120-WA0016.jpg`,
+    ],
   },
 ];
 
