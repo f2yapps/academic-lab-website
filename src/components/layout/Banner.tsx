@@ -18,7 +18,6 @@ const banners = [
   "/banners/banner12.jpg",
   "/banners/banner13.jpg",
   "/banners/banner14.jpg",
-  "/banners/banner15.JPEG",
   "/banners/banner16.jpg",
   "/banners/banner17.JPG",
   "/banners/banner18.JPG"
