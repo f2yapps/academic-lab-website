@@ -2,8 +2,17 @@
 
 import { useState } from "react";
 
+type TabId = "publication" | "grants" | "advising";
+
 export default function Page() {
-  const [activeWindow, setActiveWindow] = useState<'advising' | 'publication'>('publication');
+  const [activeWindow, setActiveWindow] = useState<TabId>("publication");
+
+  const sliderStyle =
+    activeWindow === "publication"
+      ? { left: "0.5rem", width: "calc((100% - 1rem) / 3)" }
+      : activeWindow === "grants"
+        ? { left: "calc((100% - 1rem) / 3 + 0.5rem)", width: "calc((100% - 1rem) / 3)" }
+        : { left: "calc(2 * (100% - 1rem) / 3 + 0.5rem)", width: "calc((100% - 1rem) / 3)" };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50/30 to-white">
@@ -16,45 +25,54 @@ export default function Page() {
           <div className="h-1.5 w-24 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full"></div>
         </div>
 
-        {/* Enhanced Tab Navigation */}
+        {/* Enhanced Tab Navigation - 3 tabs */}
         <div className="mb-10 sm:mb-12">
-          <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-2 sm:p-3 max-w-4xl mx-auto">
-            <div className="relative flex gap-2 sm:gap-3">
+          <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-2 sm:p-3 max-w-5xl mx-auto">
+            <div className="relative flex gap-1">
               {/* Animated Background Slider */}
               <div
-                className={`absolute top-2 bottom-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 shadow-lg transition-all duration-300 ease-in-out ${
-                  activeWindow === 'publication' ? 'left-2 right-1/2' : 'left-1/2 right-2'
-                }`}
+                className="absolute top-2 bottom-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 shadow-lg transition-all duration-300 ease-in-out"
+                style={sliderStyle}
               />
-              
-              {/* Tab Buttons */}
+
               <button
-                onClick={() => setActiveWindow('publication')}
-                className={`relative z-10 flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 ${
-                  activeWindow === 'publication'
-                    ? 'text-white shadow-md'
-                    : 'text-blue-600 hover:text-blue-700'
+                onClick={() => setActiveWindow("publication")}
+                className={`relative z-10 flex-1 px-2 sm:px-4 py-3 sm:py-4 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-300 ${
+                  activeWindow === "publication" ? "text-white shadow-md" : "text-blue-600 hover:text-blue-700"
                 }`}
               >
-                <div className="flex items-center justify-center gap-2">
-                  <svg className={`w-5 h-5 ${activeWindow === 'publication' ? 'text-white' : 'text-blue-600'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center justify-center gap-1 sm:gap-2">
+                  <svg className={`w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 ${activeWindow === "publication" ? "text-white" : "text-blue-600"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
-                  <span className="hidden sm:inline">Research Project and Publication</span>
-                  <span className="sm:hidden">Research</span>
+                  <span className="hidden sm:inline">Research Publications</span>
+                  <span className="sm:hidden">Publications</span>
                 </div>
               </button>
-              
+
               <button
-                onClick={() => setActiveWindow('advising')}
-                className={`relative z-10 flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 ${
-                  activeWindow === 'advising'
-                    ? 'text-white shadow-md'
-                    : 'text-blue-600 hover:text-blue-700'
+                onClick={() => setActiveWindow("grants")}
+                className={`relative z-10 flex-1 px-2 sm:px-4 py-3 sm:py-4 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-300 ${
+                  activeWindow === "grants" ? "text-white shadow-md" : "text-blue-600 hover:text-blue-700"
                 }`}
               >
-                <div className="flex items-center justify-center gap-2">
-                  <svg className={`w-5 h-5 ${activeWindow === 'advising' ? 'text-white' : 'text-blue-600'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center justify-center gap-1 sm:gap-2">
+                  <svg className={`w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 ${activeWindow === "grants" ? "text-white" : "text-blue-600"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="hidden sm:inline">Research Project Grants</span>
+                  <span className="sm:hidden">Grants</span>
+                </div>
+              </button>
+
+              <button
+                onClick={() => setActiveWindow("advising")}
+                className={`relative z-10 flex-1 px-2 sm:px-4 py-3 sm:py-4 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-300 ${
+                  activeWindow === "advising" ? "text-white shadow-md" : "text-blue-600 hover:text-blue-700"
+                }`}
+              >
+                <div className="flex items-center justify-center gap-1 sm:gap-2">
+                  <svg className={`w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 ${activeWindow === "advising" ? "text-white" : "text-blue-600"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                   <span className="hidden sm:inline">Advising and Services</span>
@@ -74,33 +92,13 @@ export default function Page() {
         
         {/* Full Page Layout */}
         <div className="grid grid-cols-1 gap-6 sm:gap-8">
-          {/* First Window: Research Project and Publication */}
+          {/* First Window: Research Publications */}
           {activeWindow === 'publication' && (
             <div className="space-y-6 sm:space-y-8 animate-fadeIn">
               {/* Page Header */}
               <div className="text-center mb-6">
-                <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-2">Research Project and Publication</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-2">Research Publications</h2>
                 <div className="h-1 w-20 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full"></div>
-              </div>
-              
-              {/* Sponsored Research and Programs */}
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg border border-blue-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
-                <div className="flex items-center mb-5">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mr-4 shadow-md">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Sponsored Research and Programs</h3>
-                </div>
-                    <ul className="space-y-3 pl-4">
-                      <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                        Kumar, H. & Jarboe, D. (2025). Irrigation Water Management. USDA NRCS. (PI; $1,437,526; three years).
-                      </li>
-                      <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                        Kumar, H. (2025). Optimizing Precision Irrigation Management for the Soybean Crop in Maryland. Maryland Soybean Board. (PI; $31,147; one year).
-                      </li>
-                    </ul>
               </div>
 
               {/* Research Articles */}
@@ -647,150 +645,206 @@ export default function Page() {
             </div>
           )}
 
-          {/* Second Window: Advising and Services */}
-          {activeWindow === 'advising' && (
+          {/* Research Project Grants */}
+          {activeWindow === "grants" && (
             <div className="space-y-6 sm:space-y-8 animate-fadeIn">
-              <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300 transform hover:scale-[1.01]">
-                <div className="flex items-center mb-6">
-                  <div className="w-2 h-8 bg-gradient-to-b from-blue-500 to-blue-700 rounded-full mr-4"></div>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-blue-900">Advising and Services</h2>
+              <div className="text-center mb-6">
+                <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-2">Research Project Grants</h2>
+                <div className="h-1 w-20 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full" />
+              </div>
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg border border-blue-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Sponsored Research and Programs</h3>
                 </div>
-                
-                <div className="space-y-6">
-                  {/* Academic Appointments */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Academic Appointments</h3>
-                    <ul className="space-y-3 pl-4">
-                      <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                        <span className="font-semibold">04/25-present</span> Affiliate Faculty, Department of Plant Science and Landscape Architecture
-                      </li>
-                      <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                        <span className="font-semibold">01/25-present</span> Affiliate Faculty, Artificial Intelligence Interdisciplinary Institute at Maryland
-                      </li>
-                      <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                        <span className="font-semibold">01/24-present</span> Affiliate Faculty, Department of Environmental Science and Technology
-                      </li>
-                      <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                        <span className="font-semibold">08/23-present</span> Precision Agriculture Specialist, University of Maryland Extension
-                      </li>
-                    </ul>
+                <ul className="space-y-3 pl-4">
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Kumar, H. & Jarboe, D. (2025). Irrigation Water Management. USDA NRCS. (PI; $1,437,526; three years).
+                  </li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Kumar, H. (2025). Optimizing Precision Irrigation Management for Soybean Crop in Maryland. Maryland Soybean Board. (PI; $31,147; one year).
+                  </li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Kumar, H., Karki, R., Rosen, T., Muñoz, & Lyon, S. (2024). Quantifying actual nutrient load reduction in drainage structures. Hughes Center for agro-ecology. (PI; $95,560; two years).
+                  </li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Ristvey, A, Gill, S., Clement, D., & Kumar, H. (2024). Precision Horticulture Using Unpiloted Aerial Vehicles as Part of an Integrated Plant Management Approach for Ornamental Nurseries. NIFA- New Technologies for Ag Extension Program. (Co-PI; $97,322.74; one year).
+                  </li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Kumar, H. & Sater H. (2024). Optimizing Watermelon Spraying: Assessing Drones for Effectiveness and Efficiency. Mar-Del Watermelon Association. (PI; $14,945; one year).
+                  </li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Kumar, H. (2024). Optimizing Precision Irrigation Management for Soybean Crop in Maryland. Maryland Soybean Board. (PI; $36,955; one year).
+                  </li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Kumar, H. Krishnan, N., Hooks, C., Fiorellino, N., MacCaulay, L., Vollmer, K., Gill, S., Ristvey, A., Clement, D., Kness, A., & Crowl, E. (2023). Drone Technology in Precision Agriculture: Enhancing Crop Management & Environmental Sustainability. University of Maryland Agricultural Experiment Station Equipment Grant. (PI: $48,604.4, 50% cost-share).
+                  </li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Toor, G., Duncan, C., Pavao-Zuckerman, M., & Kumar, H. (2023). Triple Liquid Water Isotope Analyzer for Advancing Research on the Fate and Transport of Contaminants in the Environment. University of Maryland Agricultural Experiment Station Equipment Grant. (Co-PI: $101,898, 50% cost-share).
+                  </li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Lyon, S., Liu Y., Shedekar, V., & Kumar, H. (2023). Drought risk reduction through automated drainage water management. AgTech Innovation Hub-Nationwide. (Co-PI: $148,151, one year).
+                  </li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Kumar, H. (2015). Hydrological modeling of large catchments using an Approximate Physically Based Model. Deutscher Akademischer Austauschdienst. (PI: $5,769, seven months).
+                  </li>
+                </ul>
+              </div>
+            </div>
+          )}
+
+          {/* Second Window: Advising and Services */}
+          {activeWindow === "advising" && (
+            <div className="space-y-6 sm:space-y-8 animate-fadeIn">
+              {/* Page Header */}
+              <div className="text-center mb-6">
+                <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-2">Advising and Services</h2>
+                <div className="h-1 w-20 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full" />
+              </div>
+
+              {/* Academic Appointments */}
+              <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl shadow-lg border border-indigo-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
                   </div>
-
-                  {/* Advising */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Advising</h3>
-                    
-                    <div className="space-y-4">
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Undergraduate</h4>
-                        <ul className="space-y-2 pl-4">
-                          <li className="text-base text-gray-700">Nathaniel Chen - Adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Raven Noel Herron - Adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Julia Sullivan - Adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Ananth Sriram - Adviser. 2023-present.</li>
-                          <li className="text-base text-gray-700">Shreeya Venkatesh Babu - Adviser. 2023-2024.</li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Master's</h4>
-                        <ul className="space-y-2 pl-4">
-                          <li className="text-base text-gray-700">John Augustus Samura - Co-adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Dhattri Meda - Adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Nayana Gadde - Adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Sri Grandhi - Adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Kaustubh Shah - Adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Sri Chandraja Reddy Allala - Adviser. 2025-present.</li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Doctoral</h4>
-                        <ul className="space-y-2 pl-4">
-                          <li className="text-base text-gray-700">Md Mahir Shahriyar - committee member (Asian Institute of Technology-Thailand)</li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Post-doctoral</h4>
-                        <ul className="space-y-2 pl-4">
-                          <li className="text-base text-gray-700">Dr. Fitsum Teshome - Adviser. 2025-present.</li>
-                          <li className="text-base text-gray-700">Dr. Cara Peterson - Adviser. 2025-present.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Editorial Boards */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Editorial Boards</h3>
-                    <ul className="space-y-2 pl-4">
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Journal of Precision Agriculture (Springer Nature)</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Agronomy Journal: Machine Learning and Precision Agriculture (Wiley)</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Journal of Smart Agricultural Technology (Elsevier)</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Special Issue Editor - Frontiers in Climate</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Guest Editor - MDPI Artificial Intelligence in Agriculture</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2024-present</span> Book Editor with Elsevier</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2023-present</span> Review Editor - Frontiers in Water</li>
-                    </ul>
-                  </div>
-
-                  {/* Campus Service */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Campus Service</h3>
-                    <ul className="space-y-2 pl-4">
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Committee Chair for Senior Faculty Specialist, MAES, AGNR</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Hiring Manager and Committee Chair for Precision Agriculture Lab, UME</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Howard County High School Recruitment, AGNR</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Judge, AGNR 2025 Cornerstone Event's Poster Session</li>
-                    </ul>
-                  </div>
-
-                  {/* Leadership Roles */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Leadership Roles (Meetings and Conferences)</h3>
-                    <ul className="space-y-2 pl-4">
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> International Advisor for the International Conference on Modern Agriculture & Allied Sciences 2025: Bridging Engineering, Policy, and Practice for a Sustainable and Resilient Future</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Moderator, Mid-Atlantic Crop Management School. Four sessions</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Moderator, Crop Irrigation Strategies and Management Oral II (includes student competition), CANVAS 2025, ASA-CSSA-SSSA.</li>
-                    </ul>
-                  </div>
-
-                  {/* Professional Certifications, Licenses, and Memberships */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Professional Certifications, Licenses, and Memberships</h3>
-                    <div className="space-y-4">
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Memberships</h4>
-                        <ul className="space-y-2 pl-4">
-                          <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> ASA-CSSA-SSSA</li>
-                          <li className="text-base text-gray-700"><span className="font-semibold">2024-present</span> FAA Certified sUAS Pilot (107 and 137 License)</li>
-                          <li className="text-base text-gray-700"><span className="font-semibold">2024-present</span> Maryland Association of County Agricultural Agents</li>
-                          <li className="text-base text-gray-700"><span className="font-semibold">2024-present</span> National Association County Agricultural Agents (NACAA)</li>
-                          <li className="text-base text-gray-700"><span className="font-semibold">2018-present</span> American Society of Agricultural and Biological Engineers (ASABE)</li>
-                          <li className="text-base text-gray-700"><span className="font-semibold">2018-present</span> Association of Agricultural, Biological, and Food Engineers of Indian Origin (AABFIEO)</li>
-                          <li className="text-base text-gray-700"><span className="font-semibold">2019-present</span> AGU: American Geophysical Union</li>
-                          <li className="text-base text-gray-700"><span className="font-semibold">2018-present</span> ASCE: American Society of Civil Engineers</li>
-                          <li className="text-base text-gray-700"><span className="font-semibold">2019-present</span> Chi Epsilon: The Honor Society of Civil Engineering</li>
-                          <li className="text-base text-gray-700"><span className="font-semibold">2018-present</span> Alpha Epsilon: The Honor Society of Agricultural, Food, and Biological Engineering</li>
-                          <li className="text-base text-gray-700"><span className="font-semibold">2018-present</span> Gamma Sigma Delta: The Honor Society of Agriculture</li>
-                          <li className="text-base text-gray-700"><span className="font-semibold">2016-present</span> PUB: Predictions in Ungauged Basins</li>
-                          <li className="text-base text-gray-700"><span className="font-semibold">2018-present</span> IAHS: International Association of Hydrological Science</li>
-                          <li className="text-base text-gray-700"><span className="font-semibold">2015-present</span> DAAD: German Academic Exchange Service fellow, Germany</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Non-University Advisory */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Non-University Advisory, Reviewing Committees, etc.</h3>
-                    <ul className="space-y-2 pl-4">
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Grant Reviewer, Israel Science Foundation</li>
-                      <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Advisor - Precision Farming Solutions, SAN R&D Business Solutions</li>
-                    </ul>
-                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Academic Appointments</h3>
                 </div>
+                <ul className="space-y-3 pl-4">
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed"><span className="font-semibold">04/25-present</span> Affiliate Faculty, Department of Plant Science and Landscape Architecture</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed"><span className="font-semibold">01/25-present</span> Affiliate Faculty, Artificial Intelligence Interdisciplinary Institute at Maryland</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed"><span className="font-semibold">01/24-present</span> Affiliate Faculty, Department of Environmental Science and Technology</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed"><span className="font-semibold">08/23-present</span> Precision Agriculture Specialist, University of Maryland Extension</li>
+                </ul>
+              </div>
+
+              {/* Advising */}
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl shadow-lg border border-emerald-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Advising</h3>
+                </div>
+                <div className="space-y-4">
+                  <div><h4 className="text-lg font-semibold text-gray-900 mb-2">Undergraduate</h4>
+                    <ul className="space-y-2 pl-4"><li className="text-base text-gray-700">Nathaniel Chen - Adviser. 2025-present.</li><li className="text-base text-gray-700">Raven Noel Herron - Adviser. 2025-present.</li><li className="text-base text-gray-700">Julia Sullivan - Adviser. 2025-present.</li><li className="text-base text-gray-700">Ananth Sriram - Adviser. 2023-present.</li><li className="text-base text-gray-700">Shreeya Venkatesh Babu - Adviser. 2023-2024.</li></ul></div>
+                  <div><h4 className="text-lg font-semibold text-gray-900 mb-2">Master&apos;s</h4>
+                    <ul className="space-y-2 pl-4"><li className="text-base text-gray-700">John Augustus Samura - Co-adviser. 2025-present.</li><li className="text-base text-gray-700">Dhattri Meda - Adviser. 2025-present.</li><li className="text-base text-gray-700">Nayana Gadde - Adviser. 2025-present.</li><li className="text-base text-gray-700">Sri Grandhi - Adviser. 2025-present.</li><li className="text-base text-gray-700">Kaustubh Shah - Adviser. 2025-present.</li><li className="text-base text-gray-700">Sri Chandraja Reddy Allala - Adviser. 2025-present.</li></ul></div>
+                  <div><h4 className="text-lg font-semibold text-gray-900 mb-2">Doctoral</h4>
+                    <ul className="space-y-2 pl-4"><li className="text-base text-gray-700">Md Mahir Shahriyar - committee member (Asian Institute of Technology-Thailand)</li></ul></div>
+                  <div><h4 className="text-lg font-semibold text-gray-900 mb-2">Post-doctoral</h4>
+                    <ul className="space-y-2 pl-4"><li className="text-base text-gray-700">Dr. Fitsum Teshome - Adviser. 2025-present.</li><li className="text-base text-gray-700">Dr. Cara Peterson - Adviser. 2025-present.</li></ul></div>
+                </div>
+              </div>
+
+              {/* Editorial Boards */}
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-lg border border-amber-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Editorial Boards</h3>
+                </div>
+                <ul className="space-y-2 pl-4">
+                  <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Journal of Precision Agriculture (Springer Nature)</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Agronomy Journal: Machine Learning and Precision Agriculture (Wiley)</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Journal of Smart Agricultural Technology (Elsevier)</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Special Issue Editor - Frontiers in Climate</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Guest Editor - MDPI Artificial Intelligence in Agriculture</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2024-present</span> Book Editor with Elsevier</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2023-present</span> Review Editor - Frontiers in Water</li>
+                </ul>
+              </div>
+
+              {/* Campus Service */}
+              <div className="bg-gradient-to-br from-sky-50 to-cyan-50 rounded-2xl shadow-lg border border-sky-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500 to-cyan-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Campus Service</h3>
+                </div>
+                <ul className="space-y-2 pl-4">
+                  <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Committee Chair for Senior Faculty Specialist, MAES, AGNR</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Hiring Manager and Committee Chair for Precision Agriculture Lab, UME</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Howard County High School Recruitment, AGNR</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Judge, AGNR 2025 Cornerstone Event&apos;s Poster Session</li>
+                </ul>
+              </div>
+
+              {/* Leadership Roles */}
+              <div className="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl shadow-lg border border-violet-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Leadership Roles (Meetings and Conferences)</h3>
+                </div>
+                <ul className="space-y-2 pl-4">
+                  <li className="text-base text-gray-700"><span className="font-semibold">2025</span> International Advisor for the International Conference on Modern Agriculture & Allied Sciences 2025: Bridging Engineering, Policy, and Practice for a Sustainable and Resilient Future</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Moderator, Mid-Atlantic Crop Management School. Four sessions</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2025</span> Moderator, Crop Irrigation Strategies and Management Oral II (includes student competition), CANVAS 2025, ASA-CSSA-SSSA.</li>
+                </ul>
+              </div>
+
+              {/* Professional Certifications, Licenses, and Memberships */}
+              <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl shadow-lg border border-rose-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Professional Certifications, Licenses &amp; Memberships</h3>
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">Memberships</h4>
+                <ul className="space-y-2 pl-4">
+                  <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> ASA-CSSA-SSSA</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2024-present</span> FAA Certified sUAS Pilot (107 and 137 License)</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2024-present</span> Maryland Association of County Agricultural Agents</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2024-present</span> National Association County Agricultural Agents (NACAA)</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2018-present</span> American Society of Agricultural and Biological Engineers (ASABE)</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2018-present</span> Association of Agricultural, Biological, and Food Engineers of Indian Origin (AABFIEO)</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2019-present</span> AGU: American Geophysical Union</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2018-present</span> ASCE: American Society of Civil Engineers</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2019-present</span> Chi Epsilon: The Honor Society of Civil Engineering</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2018-present</span> Alpha Epsilon: The Honor Society of Agricultural, Food, and Biological Engineering</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2018-present</span> Gamma Sigma Delta: The Honor Society of Agriculture</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2016-present</span> PUB: Predictions in Ungauged Basins</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2018-present</span> IAHS: International Association of Hydrological Science</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2015-present</span> DAAD: German Academic Exchange Service fellow, Germany</li>
+                </ul>
+              </div>
+
+              {/* Non-University Advisory */}
+              <div className="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl shadow-lg border border-slate-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-500 to-gray-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Non-University Advisory &amp; Reviewing</h3>
+                </div>
+                <ul className="space-y-2 pl-4">
+                  <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Grant Reviewer, Israel Science Foundation</li>
+                  <li className="text-base text-gray-700"><span className="font-semibold">2025-present</span> Advisor - Precision Farming Solutions, SAN R&amp;D Business Solutions</li>
+                </ul>
               </div>
             </div>
           )}

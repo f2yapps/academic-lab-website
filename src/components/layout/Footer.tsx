@@ -70,7 +70,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Precision Agriculture Lab (PAL). All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Digital and Precision Agriculture Lab (D-PAL). All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Link from "next/link";
 
 const banners = [
   "/banners/banner9.jpg",
@@ -44,20 +43,6 @@ export default function Banner() {
           />
         </div>
       ))}
-      
-      {/* PAL Logo on left side above text background */}
-      <div className="absolute left-4 sm:left-6 md:left-8 bottom-16 sm:bottom-20 md:bottom-24 z-20">
-        <Link href="/" className="block">
-          <Image
-            src="/profile%20pictures/PAL_LOGO.png"
-            alt="PAL Logo"
-            width={180}
-            height={180}
-            className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain drop-shadow-lg hover:scale-105 transition-transform"
-            unoptimized
-          />
-        </Link>
-      </div>
 
       {/* Running text at bottom of banner */}
       <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden z-10" style={{
