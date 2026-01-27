@@ -50,8 +50,17 @@ function BulletList({ items }: { items: string[] }) {
   );
 }
 
+type ExtTab = "program1" | "program2" | "teaching";
+
 export default function Page() {
-  const [activeProgram, setActiveProgram] = useState<"program1" | "program2">("program1");
+  const [activeProgram, setActiveProgram] = useState<ExtTab>("program1");
+
+  const sliderStyle =
+    activeProgram === "program1"
+      ? { left: "0.5rem", width: "calc((100% - 1rem) / 3)" }
+      : activeProgram === "program2"
+        ? { left: "calc((100% - 1rem) / 3 + 0.5rem)", width: "calc((100% - 1rem) / 3)" }
+        : { left: "calc(2 * (100% - 1rem) / 3 + 0.5rem)", width: "calc((100% - 1rem) / 3)" };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50/30 to-white">
@@ -63,19 +72,18 @@ export default function Page() {
           <div className="h-1.5 w-24 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full" />
         </div>
 
-        {/* Tab Navigation */}
+        {/* Tab Navigation - 3 tabs */}
         <div className="mb-10">
-          <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-2 sm:p-3 max-w-3xl mx-auto">
-            <div className="relative flex gap-2">
+          <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-2 sm:p-3 max-w-5xl mx-auto">
+            <div className="relative flex gap-1">
               <div
-                className={`absolute top-2 bottom-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 shadow-lg transition-all duration-300 ease-in-out ${
-                  activeProgram === "program1" ? "left-2 right-1/2" : "left-1/2 right-2"
-                }`}
+                className="absolute top-2 bottom-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 shadow-lg transition-all duration-300 ease-in-out"
+                style={sliderStyle}
               />
               <button
                 type="button"
                 onClick={() => setActiveProgram("program1")}
-                className={`relative z-10 flex-1 px-4 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 ${
+                className={`relative z-10 flex-1 px-2 sm:px-4 py-3 sm:py-4 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-300 ${
                   activeProgram === "program1" ? "text-white" : "text-blue-600 hover:text-blue-700"
                 }`}
               >
@@ -85,16 +93,26 @@ export default function Page() {
               <button
                 type="button"
                 onClick={() => setActiveProgram("program2")}
-                className={`relative z-10 flex-1 px-4 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 ${
+                className={`relative z-10 flex-1 px-2 sm:px-4 py-3 sm:py-4 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-300 ${
                   activeProgram === "program2" ? "text-white" : "text-blue-600 hover:text-blue-700"
                 }`}
               >
                 <span className="hidden sm:inline">Extension Program 2</span>
                 <span className="sm:hidden">Program 2</span>
               </button>
+              <button
+                type="button"
+                onClick={() => setActiveProgram("teaching")}
+                className={`relative z-10 flex-1 px-2 sm:px-4 py-3 sm:py-4 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-300 ${
+                  activeProgram === "teaching" ? "text-white" : "text-blue-600 hover:text-blue-700"
+                }`}
+              >
+                <span className="hidden sm:inline">Extension Teaching Activities</span>
+                <span className="sm:hidden">Teaching</span>
+              </button>
             </div>
           </div>
-          <div className="mt-6 flex items-center justify-center gap-4 max-w-3xl mx-auto">
+          <div className="mt-6 flex items-center justify-center gap-4 max-w-5xl mx-auto">
             <div className="flex-1 h-px bg-gradient-to-r from-transparent via-blue-300 to-blue-500" />
             <div className="w-2 h-2 rounded-full bg-blue-500" />
             <div className="flex-1 h-px bg-gradient-to-l from-transparent via-blue-300 to-blue-500" />
@@ -483,6 +501,69 @@ export default function Page() {
                   ))}
                 </div>
               </section>
+            </div>
+          )}
+
+          {activeProgram === "teaching" && (
+            <div className="animate-fadeIn space-y-6 sm:space-y-8">
+              <div className="text-center">
+                <h2 className="text-2xl sm:text-3xl font-bold text-blue-900">
+                  Extension Teaching Activities
+                </h2>
+                <div className="h-1 w-20 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full mt-2" />
+              </div>
+
+              <SectionCard
+                gradient="bg-gradient-to-br from-sky-50 to-blue-50"
+                border="border-sky-200/50"
+                title="Mid-Atlantic Crop Management School (2023-present)"
+                icon={
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                }
+              >
+                <p className="text-gray-700 leading-relaxed">
+                  Kumar joined the Mid-Atlantic Crop Management School in 2023 as a moderator. Since 2024, Kumar has joined alternative sessions (Fifth session) as a committee member, chaired by Andrew Kness.
+                </p>
+                <p className="text-gray-700 leading-relaxed mt-4">
+                  Kumar works to provide the speaker for the session and serves as a moderator at the school. This committee is made up of five individuals from UMD and the University of Delaware who are responsible for developing a content theme for each year and inviting and coordinating all nine speakers for the session. University faculty from all over the United States are solicited as speakers. The committee also helps plan the overall format for the entire meeting in collaboration with the other committees.
+                </p>
+                <p className="text-gray-700 leading-relaxed mt-4">
+                  In 2025, Kumar invited Dr. Heather Preisendanz from Penn State University as a speaker to this alternative session.
+                </p>
+                <p className="text-gray-700 leading-relaxed mt-2">
+                  In 2024, Kumar invited Dr. Brenda Ortiz from Auburn University as a speaker to this alternative session.
+                </p>
+                <p className="text-gray-700 leading-relaxed mt-4">
+                  The International Certified Crop Adviser (CCA) Certification Program is a voluntary program offered by the American Society of Agronomy that provides a benchmark for practicing agronomy professionals. There are currently &gt;300 active CCAs in the Mid-Atlantic Region (DE, MD, NJ, VA, and WV) that must complete continuing education in the areas of agronomy, fruit/vegetable production, nutrient management, soil/water quality, pesticide education, and professional development.
+                </p>
+                <p className="text-gray-700 leading-relaxed mt-4">
+                  The Mid-Atlantic Crop Management School provides an opportunity for regional agricultural clientele to receive continuing education for state-required certification programs and CCA credits.
+                </p>
+                <p className="text-gray-700 leading-relaxed mt-4">
+                  Crop School is traditionally held the week before Thanksgiving in Ocean City, Maryland. Five concurrent sessions featuring speakers from across the country were offered on the latest research and implementation strategies related to nutrient management (10 talks), crop management (10 talks), integrated pest management (7 talks), soil and water management (9 talks), and an alternative session on specialty, vegetable, and fruit crops (9 talks).
+                </p>
+              </SectionCard>
+
+              <SectionCard
+                gradient="bg-gradient-to-br from-teal-50 to-cyan-50"
+                border="border-teal-200/50"
+                title="Other Teaching Activities"
+                icon={
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                }
+              >
+                <BulletList items={[
+                  "2023: Farmers' meeting to deliver the outcomes of Environmental and Economic Tradeoffs Associated with Integrating Livestock into Cash Grain Cropping Systems in Eastern Ohio.",
+                  "2023: Farmers' meeting to deliver the outcomes of Environmental and Economic Tradeoffs Associated with Integrating Livestock into Cash Grain Cropping Systems in Western Ohio.",
+                  "2022: Discussed designing more climate resilient agroecosystems in Ohio with farmers, stakeholders, and Extension agents during 16th Stinner Summit.",
+                  "2019: Field Day for farmers and stakeholders in North Alabama about precision agriculture and smart irrigation practices on June 26, 2019.",
+                  "2018: Different aspects of precision agriculture to Alabama farmers. (Presented outcomes to Alabama farmers of the research conducted in agricultural fields).",
+                ]} />
+              </SectionCard>
             </div>
           )}
         </div>

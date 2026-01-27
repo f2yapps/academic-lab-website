@@ -245,6 +245,61 @@ export default function Page() {
                     </ul>
               </div>
 
+              {/* Research publications under progress */}
+              <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl shadow-lg border border-teal-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Research publications under progress</h3>
+                </div>
+                <ul className="space-y-3 pl-4">
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Fleuridor, L., Haden, V.R., Jackson-Smith, D., Kumar, H., Otaviano, E., Woods, T., Lyon, S., Chiavegato, M., Brown, C., & Hampton, J. (under review). Soil Health Legacy Effects of Integrating Crop and Livestock Production.
+                  </li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Nabaggala, M., Katimbo, A., Beegum, S., Kumar, H., Nakabuye, H., Taghvaeian, S., Heeren, D., Menza, N., Rudnick, D.R., & Proctor, C. (under review). Integrating Irrigation, Nitrogen and Cover Crop Strategies for Nitrate Leaching Reduction: Review.
+                  </li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Tangwongkit, P., Debnath, S., Kumar, H., Datta, A., & Himanshu, S.K. (under review). Deep and Machine Learning in Plant Variety Classification: A Systematic Global Review of Image Processing Approaches.
+                  </li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Singh, R., Lamba, J., Gamble, A.V., Way, T.R., Kumar, H., & Watts, D.B. (under review). Impact of Long-term Cover Crop Treatments on Soil Hydro-physical and X-ray Computed Tomography Derived Soil Pore Characteristics.
+                  </li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Kumar, H., Srivastava, P., Lamba, J., Ortiz, B. V., Lyon, S.W., Takhellambam, B.S., Morata, G., & Bondesan., L. (under-prep). Integral method of irrigation optimization with temporal stability in soil moisture and unsupervised fuzzy classification of management zones.
+                  </li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Takhellambam, B.S., Srivastava, P., Lamba, J., Kumar, H., & Molinari, R. (under-prep). Quantifying Uncertainty of Rainfall Intensity Duration Frequency Curves Using Artificial Neural Network and Bootstrapping Resampling Technique.
+                  </li>
+                </ul>
+              </div>
+
+              {/* Other Research / Scholarship / Creative Activities */}
+              <div className="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl shadow-lg border border-slate-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-500 to-gray-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Other Research / Scholarship / Creative Activities</h3>
+                </div>
+                <ul className="space-y-3 pl-4">
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Quantifying water flow pathway redistribution under agricultural drainage. The Ohio State University, USA. (Ohio Water Resources Center, USGS).</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Characterization of Water Quality and Quantity of greenhouse or nursery waters in Erie Lake Lowland or Drift Plain Eco-Regions of the USA. The Ohio State University and Application Technology Research Unit, USA. (USDA ARS Cooperative Agreement).</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Comparing the environmental tradeoffs and synergies of alternative modes of integrating livestock into cash grain cropping systems. The Ohio State University, USA. (National Institute of Food and Agriculture (NIFA) (Agriculture and Food Research Initiative (AFRI). Inter-Disciplinary Engagement in Animal Systems (IDEAS (A1261) program area).</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Increasing adoption of climate- and water-smart irrigation practices among Tennessee Valley farmers in Alabama and Tennessee. Auburn University, USA. (USDA NRCS CIG 69- 3A75- 17-273).</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Quantification of nutrient transport dynamics in agricultural landscapes. Auburn University, USA. (USDA NIFA ALA014-0-19052).</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Estimation of flash floods in ungauged watersheds. Technical University of Munich, Germany. (Bavarian State Ministry of the Environment and Consumer Protection and the Bavarian Environmental Agency).</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">The regional assessment of statistical properties of discharge for Unobserved catchments using meteorological and regional hydrological information. University of Stuttgart, Germany. (DAAD Germany).</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Hydrological modeling of large catchments using an Approximate Physically Based Model. Indian Institute of Technology, Roorkee, India. (MHRD India).</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Design refinement, development of solid model and field evaluation of paddy nursery cutter. Punjab Agricultural University, India.</li>
+                </ul>
+              </div>
+
               {/* Book Chapters */}
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg border border-purple-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center mb-5">
@@ -684,6 +739,40 @@ export default function Page() {
                   <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
                     Kumar, H. (2015). Hydrological modeling of large catchments using an Approximate Physically Based Model. Deutscher Akademischer Austauschdienst. (PI: $5,769, seven months).
                   </li>
+                </ul>
+              </div>
+
+              {/* Research Fellowships, Prizes and Awards */}
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-lg border border-amber-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Research Fellowships, Prizes and Awards</h3>
+                </div>
+                <ul className="space-y-2 pl-4">
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Awarded Distinguished Dissertation Award by Auburn University. 2024</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Awarded Outstanding Reviewer by ASABE Technical Communities. 2023</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Awarded GSC Travel Grant by Graduate Student Council at Auburn University to present research in ASABE conference. 2022</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Won 2021 Extension Education publication Award for &quot;DigitalAg@Farms&quot; publication by Auburn precision agriculture team at ASA, CSSA, SSSA Annual Meeting at Salt Lake City, Utah. 2021</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Won Best of Biosystems Engineering Award at Graduate Engineering Research Showcase at Auburn University. 2021</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Awarded GSC Travel Grant by Graduate Student Council at Auburn University to present research in ASABE conference. 2021</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">2021 Extension Education publication Award for &quot;DigitalAg@Farms&quot; publication by the Auburn precision agriculture team at ASA, CSSA, SSSA Annual Meeting at Salt Lake City, Utah. 2021</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Awarded Outstanding Doctoral Student for the year 2021 at Auburn University. 2021</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Awarded AGU Travel Grant to attend AGU Fall meeting 2020.</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Awarded CUAHSI Travel Grant to register AGU Fall meeting 2020.</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Awarded CUAHSI Travel Grant to attend the short course on Waterhackweek 2020-Water Data Science at University of Washington. 2020</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Awarded GSC Travel Grant by Graduate Student Council at Auburn University to participate in ASABE conference. 2019</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Awarded CUAHSI Travel Grant to attend the short course on The Science and Practice of Operational Ensemble Hydrological Prediction at NCAR-UCAR, Colorado. 2019</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Awarded PUB Summer School Grant to participate in a course on Runoff Predictions in Ungauged Basins (PUB) at the Centre for Water Resource Systems, TU Wien, Vienna, Austria. 2017</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Awarded TUM-GS Opportunity Grant by Graduate School at Technical University of Munich, Germany. 2017</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Awarded DAAD Scholarship amongst the few selected all over India to get an opportunity for doing Master&apos;s thesis in Germany. 2015-2016</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Awarded MHRD Fellowship by Ministry of Human Resources and Development at Indian Institute of Technology (IIT), Roorkee awarded by Government of India as an appreciation for higher studies. 2014-2016</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Awarded NTS-National Talent Scholarship holder at Punjab Agricultural University for Under graduation by Indian Council for Agricultural Research (ICAR). 2010-2014</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Awarded BSG-Bharat Scouts and Guides Fellowship at National Institute of Adventuring at Pachmarhi by MHRD (Ministry of Human Resources and Development), Govt. of India. 2004-2009</li>
+                  <li className="text-base sm:text-lg text-gray-700 leading-relaxed">Awarded JNVST Fellowship, Jawahar Navodaya Vidyalaya Selection Test conducted by CBSE (Central Board of Secondary Education) under MHRD (Ministry of Human Resources and Development), Govt. of India, to get free education from K-6 to K-12. 2002-2009</li>
                 </ul>
               </div>
             </div>
