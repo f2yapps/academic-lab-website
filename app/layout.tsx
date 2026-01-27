@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Digital and Precision Agriculture Lab (D-PAL) | University of Maryland",
-  description: "The Digital and Precision Agriculture Lab (D-PAL) at the University of Maryland is dedicated to advancing innovative, data-driven solutions for sustainable and efficient agricultural practices through remote sensing, GIS, IoT, and artificial intelligence.",
+  description: "The Digital and Precision Agriculture Lab (D-PAL) at the University of Maryland is an AI-focused lab advancing data-driven solutions for sustainable agriculture through machine learning, remote sensing, GIS, IoT, and precision decision support.",
   icons: {
     icon: "/favicon.ico",
   },
