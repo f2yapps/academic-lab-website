@@ -7,10 +7,22 @@ const banners = [
   "/banners/banner9.jpg",
   "/banners/banner2.png",
   "/banners/banner1.png",
+  "/banners/banner2.png",
+  "/banners/banner4.png",
   "/banners/banner3.png",
   "/banners/banner7.JPG",
   "/banners/banner5.png",
   "/banners/banner8.JPG",
+  "/banners/banner42.jpg",
+  "/banners/banner43.png",
+  "/banners/banner45.png",
+  "/banners/banner46.png",
+  "/banners/banner47.JPG",
+  "/banners/banner48.png",
+  "/banners/banner49.JPEG",
+  "/banners/banner49.jpg",
+  "/banners/banner50.JPG",
+  "/banners/banner52.JPG"
 ];
 
 export default function Banner() {
