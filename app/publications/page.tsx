@@ -20,7 +20,7 @@ export default function Page() {
         {/* Header */}
         <div className="text-center mb-10 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-            Publications and Services
+            Grants, Publications, and Services
           </h1>
           <div className="h-1.5 w-24 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full"></div>
         </div>
