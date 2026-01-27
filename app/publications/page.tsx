@@ -642,9 +642,8 @@ export default function Page() {
                         Precision Ag and Soil Health. Central Maryland 2025 Agronomy Update. February 19, 2025.
                       </li>
                     </ul>
-                  </div>
-                </div>
               </div>
+
             </div>
           )}
 
