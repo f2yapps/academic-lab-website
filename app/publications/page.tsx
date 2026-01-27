@@ -67,7 +67,7 @@ export default function Page() {
                   <svg className={`w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 ${activeWindow === "advising" ? "text-white" : "text-blue-600"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
-                  <span className="hidden sm:inline">Advising and Services</span>
+                  <span className="hidden sm:inline">Services</span>
                   <span className="sm:hidden">Services</span>
                 </div>
               </button>
@@ -778,12 +778,12 @@ export default function Page() {
             </div>
           )}
 
-          {/* Second Window: Advising and Services */}
+          {/* Services */}
           {activeWindow === "advising" && (
             <div className="space-y-6 sm:space-y-8 animate-fadeIn">
               {/* Page Header */}
               <div className="text-center mb-6">
-                <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-2">Advising and Services</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-2">Services</h2>
                 <div className="h-1 w-20 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full" />
               </div>
 
@@ -803,28 +803,6 @@ export default function Page() {
                   <li className="text-base sm:text-lg text-gray-700 leading-relaxed"><span className="font-semibold">01/24-present</span> Affiliate Faculty, Department of Environmental Science and Technology</li>
                   <li className="text-base sm:text-lg text-gray-700 leading-relaxed"><span className="font-semibold">08/23-present</span> Precision Agriculture Specialist, University of Maryland Extension</li>
                 </ul>
-              </div>
-
-              {/* Advising */}
-              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl shadow-lg border border-emerald-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
-                <div className="flex items-center mb-5">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mr-4 shadow-md">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Advising</h3>
-                </div>
-                <div className="space-y-4">
-                  <div><h4 className="text-lg font-semibold text-gray-900 mb-2">Undergraduate</h4>
-                    <ul className="space-y-2 pl-4"><li className="text-base text-gray-700">Nathaniel Chen - Adviser. 2025-present.</li><li className="text-base text-gray-700">Raven Noel Herron - Adviser. 2025-present.</li><li className="text-base text-gray-700">Julia Sullivan - Adviser. 2025-present.</li><li className="text-base text-gray-700">Ananth Sriram - Adviser. 2023-present.</li><li className="text-base text-gray-700">Shreeya Venkatesh Babu - Adviser. 2023-2024.</li></ul></div>
-                  <div><h4 className="text-lg font-semibold text-gray-900 mb-2">Master&apos;s</h4>
-                    <ul className="space-y-2 pl-4"><li className="text-base text-gray-700">John Augustus Samura - Co-adviser. 2025-present.</li><li className="text-base text-gray-700">Dhattri Meda - Adviser. 2025-present.</li><li className="text-base text-gray-700">Nayana Gadde - Adviser. 2025-present.</li><li className="text-base text-gray-700">Sri Grandhi - Adviser. 2025-present.</li><li className="text-base text-gray-700">Kaustubh Shah - Adviser. 2025-present.</li><li className="text-base text-gray-700">Sri Chandraja Reddy Allala - Adviser. 2025-present.</li></ul></div>
-                  <div><h4 className="text-lg font-semibold text-gray-900 mb-2">Doctoral</h4>
-                    <ul className="space-y-2 pl-4"><li className="text-base text-gray-700">Md Mahir Shahriyar - committee member (Asian Institute of Technology-Thailand)</li></ul></div>
-                  <div><h4 className="text-lg font-semibold text-gray-900 mb-2">Post-doctoral</h4>
-                    <ul className="space-y-2 pl-4"><li className="text-base text-gray-700">Dr. Fitsum Teshome - Adviser. 2025-present.</li><li className="text-base text-gray-700">Dr. Cara Peterson - Adviser. 2025-present.</li></ul></div>
-                </div>
               </div>
 
               {/* Editorial Boards */}
