@@ -25,11 +25,11 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Media and Awards Section */}
+        {/* Media and News Articles Section */}
         <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-6 sm:p-8 mb-6 sm:mb-8 hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center mb-6">
             <div className="w-2 h-8 bg-gradient-to-b from-blue-500 to-blue-700 rounded-full mr-4"></div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-blue-900">Media and Awards</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-blue-900">Media and News Articles</h2>
           </div>
           
           <div className="space-y-6">
