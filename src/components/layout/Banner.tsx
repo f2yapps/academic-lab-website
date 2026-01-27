@@ -4,25 +4,24 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const banners = [
-  "/banners/banner9.jpg",
-  "/banners/banner2.png",
-  "/banners/banner1.png",
-  "/banners/banner2.png",
-  "/banners/banner4.png",
+  "/banners/banner1.jpg",
+  "/banners/banner2.jpg",
   "/banners/banner3.png",
+  "/banners/banner4.png",
+  "/banners/banner5.jpg",
+  "/banners/banner6.png",
   "/banners/banner7.JPG",
-  "/banners/banner5.png",
   "/banners/banner8.JPG",
-  "/banners/banner42.jpg",
-  "/banners/banner43.png",
-  "/banners/banner45.png",
-  "/banners/banner46.png",
-  "/banners/banner47.JPG",
-  "/banners/banner48.png",
-  "/banners/banner49.JPEG",
-  "/banners/banner49.jpg",
-  "/banners/banner50.JPG",
-  "/banners/banner52.JPG"
+  "/banners/banner9.png",
+  "/banners/banner10.jpg",
+  "/banners/banner11.jpg",
+  "/banners/banner12.jpg",
+  "/banners/banner13.jpg",
+  "/banners/banner14.jpg",
+  "/banners/banner15.JPEG",
+  "/banners/banner16.jpg",
+  "/banners/banner17.JPG",
+  "/banners/banner18.JPG"
 ];
 
 export default function Banner() {
