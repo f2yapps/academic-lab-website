@@ -5,6 +5,8 @@ import Image from "next/image";
 interface TeamMember {
   name: string;
   position?: string;
+  /** Role/period for Previous Lab Members (e.g. "Adviser. 2023-2024") */
+  role?: string;
   profileImage?: string;
   email: string;
   phone?: string;
@@ -24,7 +26,7 @@ interface TeamMember {
     x?: string;
     github?: string;
   };
-  category: "PI" | "Postdoctoral Research Associate" | "Graduate Students" | "Undergraduate Students" | "Former Lab Members";
+  category: "PI" | "Postdoctoral Research Associate" | "Graduate Students" | "Undergraduate Students" | "Former Lab Members" | "Previous Lab Members" | "Visiting Scholar/Scientists";
 }
 
 // Team member data - Update this with actual information
@@ -151,6 +153,22 @@ const teamMembers: TeamMember[] = [
     category: "Undergraduate Students",
   },
   {
+    name: "Raven Noel Herron",
+    email: "rherron@terpmail.umd.edu",
+    education: {
+      bsc: "University of Maryland (In Progress)",
+    },
+    category: "Undergraduate Students",
+  },
+  {
+    name: "Julia Sullivan",
+    email: "jsulli@terpmail.umd.edu",
+    education: {
+      bsc: "University of Maryland (In Progress)",
+    },
+    category: "Undergraduate Students",
+  },
+  {
     name: "Kaustubh Shah",
     profileImage: "/profile%20pictures/Kaustubhheadshot.JPG",
     email: "kshah115@umd.edu",
@@ -163,6 +181,45 @@ const teamMembers: TeamMember[] = [
       github: "https://sites.google.com/view/kaustubh-shah/",
     },
     category: "Graduate Students",
+  },
+  {
+    name: "Nayana Gadde",
+    email: "ngadde@umd.edu",
+    education: {
+      msc: "University of Maryland (In Progress)",
+    },
+    category: "Graduate Students",
+  },
+  {
+    name: "Sri Grandhi",
+    email: "sgrandhi@umd.edu",
+    education: {
+      msc: "University of Maryland (In Progress)",
+    },
+    category: "Graduate Students",
+  },
+  {
+    name: "John Augustus Samura",
+    email: "jsamura@umd.edu",
+    education: {
+      msc: "University of Maryland (In Progress)",
+    },
+    category: "Graduate Students",
+  },
+  {
+    name: "Md Mahir Shahriyar",
+    email: "—",
+    education: {
+      phd: "Doctoral Student — committee member (Asian Institute of Technology, Thailand)",
+    },
+    category: "Graduate Students",
+  },
+  {
+    name: "Shreeya Venkatesh Babu",
+    email: "—",
+    role: "Adviser. 2023-2024",
+    education: {},
+    category: "Previous Lab Members",
   },
 ];
 
@@ -211,9 +268,13 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
         <div className="bg-white/60 rounded-lg p-3 shadow-sm">
           <p className="text-gray-700 mb-2">
             <span className="font-semibold text-blue-900">Email:</span>{" "}
-            <a href={`mailto:${member.email}`} className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">
-              {member.email}
-            </a>
+            {member.email && member.email !== "—" ? (
+              <a href={`mailto:${member.email}`} className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">
+                {member.email}
+              </a>
+            ) : (
+              <span className="text-gray-600">—</span>
+            )}
           </p>
           {member.phone && (
             <p className="text-gray-700">
@@ -226,7 +287,19 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
         </div>
       </div>
 
+      {/* Role (e.g. for Previous Lab Members) */}
+      {member.role && (
+        <div className="mb-6 flex-1">
+          <h4 className="font-bold text-gray-900 mb-3 text-lg sm:text-xl flex items-center">
+            <span className="w-1 h-5 bg-blue-600 mr-2 rounded-full"></span>
+            Role / period
+          </h4>
+          <p className="text-base sm:text-lg text-gray-700">{member.role}</p>
+        </div>
+      )}
+
       {/* Education Background */}
+      {(member.education.phd || member.education.msc || member.education.mtech || member.education.bsc) && (
       <div className="mb-6 flex-1">
         <h4 className="font-bold text-gray-900 mb-3 text-lg sm:text-xl flex items-center">
           <span className="w-1 h-5 bg-blue-600 mr-2 rounded-full"></span>
@@ -263,6 +336,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
           )}
         </ul>
       </div>
+      )}
 
       {/* Social Links */}
       {member.links && (
@@ -389,6 +463,8 @@ export default function Page() {
   const gradStudents = teamMembers.filter((m) => m.category === "Graduate Students");
   const undergradStudents = teamMembers.filter((m) => m.category === "Undergraduate Students");
   const formerMembers = teamMembers.filter((m) => m.category === "Former Lab Members");
+  const previousLabMembers = teamMembers.filter((m) => m.category === "Previous Lab Members");
+  const visitingScholarScientists = teamMembers.filter((m) => m.category === "Visiting Scholar/Scientists");
 
   return (
     <div className="min-h-screen">
@@ -452,6 +528,34 @@ export default function Page() {
             </div>
           </div>
         )}
+
+        {/* Previous Lab Members */}
+        <div className="mb-8 sm:mb-12">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-900 mb-4 sm:mb-6">Previous Lab Members</h2>
+          {previousLabMembers.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+              {previousLabMembers.map((member) => (
+                <TeamMemberCard key={member.name} member={member} />
+              ))}
+            </div>
+          ) : (
+            <p className="text-gray-600 text-base sm:text-lg">None listed.</p>
+          )}
+        </div>
+
+        {/* Visiting Scholar/Scientists */}
+        <div className="mb-8 sm:mb-12">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-900 mb-4 sm:mb-6">Visiting Scholar/Scientists</h2>
+          {visitingScholarScientists.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+              {visitingScholarScientists.map((member) => (
+                <TeamMemberCard key={member.name} member={member} />
+              ))}
+            </div>
+          ) : (
+            <p className="text-gray-600 text-base sm:text-lg">None at present.</p>
+          )}
+        </div>
 
         {/* Join Our Lab */}
         <div className="mb-8 sm:mb-12 mt-12 sm:mt-16">
