@@ -77,16 +77,22 @@ export default function Page() {
           {/* First Window: Research Project and Publication */}
           {activeWindow === 'publication' && (
             <div className="space-y-6 sm:space-y-8 animate-fadeIn">
-              <div className="bg-white rounded-2xl shadow-lg border border-blue-100/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300 transform hover:scale-[1.01]">
-                <div className="flex items-center mb-6">
-                  <div className="w-2 h-8 bg-gradient-to-b from-blue-500 to-blue-700 rounded-full mr-4"></div>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-blue-900">Research Project and Publication</h2>
+              {/* Page Header */}
+              <div className="text-center mb-6">
+                <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-2">Research Project and Publication</h2>
+                <div className="h-1 w-20 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full"></div>
+              </div>
+              
+              {/* Sponsored Research and Programs */}
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg border border-blue-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Sponsored Research and Programs</h3>
                 </div>
-                
-                <div className="space-y-6">
-                  {/* Sponsored Research and Programs */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Sponsored Research and Programs</h3>
                     <ul className="space-y-3 pl-4">
                       <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
                         Kumar, H. & Jarboe, D. (2025). Irrigation Water Management. USDA NRCS. (PI; $1,437,526; three years).
@@ -95,11 +101,18 @@ export default function Page() {
                         Kumar, H. (2025). Optimizing Precision Irrigation Management for the Soybean Crop in Maryland. Maryland Soybean Board. (PI; $31,147; one year).
                       </li>
                     </ul>
-                  </div>
+              </div>
 
-                  {/* Research Articles */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Research Articles</h3>
+              {/* Research Articles */}
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl shadow-lg border border-emerald-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Research Articles</h3>
+                </div>
                     <ul className="space-y-3 pl-4">
                       <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
                         Kumar, H., Fleuridor, L., Haden, V.R., Chiavegato, M., Jackson-Smith, D., & Lyon, S. (2025). Soil and water impacts around re-introduction of manure into farming systems. <em className="text-gray-900 font-semibold">Agrosystems, Geosciences & Environment</em>.{" "}
@@ -240,11 +253,18 @@ export default function Page() {
                         <span className="text-sm text-gray-500 ml-2">9 citations</span>
                       </li>
                     </ul>
-                  </div>
+              </div>
 
-                  {/* Book Chapters */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Book Chapters</h3>
+              {/* Book Chapters */}
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg border border-purple-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Book Chapters</h3>
+                </div>
                     <ul className="space-y-3 pl-4">
                       <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
                         Palli, A.*, Sater, H., & Kumar, H. (accepted). Optimizing UAV spray application for pesticide deposition in watermelon production systems in the Mid-Atlantic. <em className="text-gray-900 font-semibold">Precision Technologies for Digital Agriculture: Harnessing IoT, Big Data, Crop Modeling, and AI for Agricultural Production</em>. Elsevier.
@@ -262,21 +282,35 @@ export default function Page() {
                         Kumar, H., Ortiz, B.V., Srivastava, P., & Lamba, J. (2024). Assessing nutrient variability in irrigated agricultural fields using unsupervised learning and mixed models. <em className="text-gray-900 font-semibold">Advances in agri-tech approaches for nutrients and irrigation water management</em>. Taylor and Francis Group, 68-82.
                       </li>
                     </ul>
-                  </div>
+              </div>
 
-                  {/* Edited Book */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Edited Book</h3>
+              {/* Edited Book */}
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-lg border border-amber-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Edited Book</h3>
+                </div>
                     <ul className="space-y-3 pl-4">
                       <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
                         Himanshu, S.K., Kumar, H., Gupta, P.K., & Palmate, S. S. (under-review). <em className="text-gray-900 font-semibold">Precision Technologies for digital agriculture: Harnessing IoT, big data, crop modeling, and AI for agricultural production</em>. Elsevier.
                       </li>
                     </ul>
-                  </div>
+              </div>
 
-                  {/* Conference Presentations */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Conference Presentations</h3>
+              {/* Conference Presentations */}
+              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl shadow-lg border border-cyan-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Conference Presentations</h3>
+                </div>
                     <ul className="space-y-2 pl-4">
                       <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
                         Palli, A.* & Kumar, H. (2025). Leaf Area Index (LAI) estimation using deep learning and drone imagery. Northeast Agricultural/Biological Engineering Conference (NABEC), August 3-6, 2025.
@@ -425,9 +459,16 @@ export default function Page() {
                     </ul>
                   </div>
 
-                  {/* Posters */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Posters</h3>
+              {/* Posters */}
+              <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl shadow-lg border border-rose-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Posters</h3>
+                </div>
                     <ul className="space-y-2 pl-4">
                       <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
                         Gadde, N.*, Peterson, C., & Kumar, H. (2025). Forecasting Soil Matric Potential Using ML Ensemble Approach. Cornerstone Event, College of Agriculture and Natural Resources, University of Maryland. October 23, 2025.
@@ -489,9 +530,16 @@ export default function Page() {
                     </ul>
                   </div>
 
-                  {/* Invited Talks */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Invited Talks</h3>
+              {/* Invited Talks */}
+              <div className="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl shadow-lg border border-violet-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Invited Talks</h3>
+                </div>
                     <ul className="space-y-2 pl-4">
                       <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
                         Kumar, H. (2025). Does Data Aggregation Matter in AI Irrigation Predictions? International Conference on Modern Agriculture & Allied Sciences. December 21-22, 2025.
@@ -550,9 +598,16 @@ export default function Page() {
                     </ul>
                   </div>
 
-                  {/* Keynotes */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Keynotes</h3>
+              {/* Keynotes */}
+              <div className="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl shadow-lg border border-yellow-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-500 to-amber-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Keynotes</h3>
+                </div>
                     <ul className="space-y-2 pl-4">
                       <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
                         Kumar, H. (2025). Is Agricultural Intelligence Replacing Other Precision Agriculture Technologies? Keynote Speaker and International Advisor to "International Conference on Modern Agriculture & Allied Sciences (ICMAAS-2025)." December 21-22, 2025.
@@ -566,9 +621,16 @@ export default function Page() {
                     </ul>
                   </div>
 
-                  {/* Panels */}
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Panels</h3>
+              {/* Panels */}
+              <div className="bg-gradient-to-br from-sky-50 to-cyan-50 rounded-2xl shadow-lg border border-sky-200/50 p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500 to-cyan-600 flex items-center justify-center mr-4 shadow-md">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Panels</h3>
+                </div>
                     <ul className="space-y-2 pl-4">
                       <li className="text-base sm:text-lg text-gray-700 leading-relaxed">
                         Nitrogen Modeling panel. Nutrient Management Update Meeting, Maryland Department of Agriculture. December 4 and December 15, 2025.
